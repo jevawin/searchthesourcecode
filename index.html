@@ -20,6 +20,7 @@
       <div class="center">
         <h1>Search the Source Code</h1>
         <p>Crawl and search the source code of a website for a particular code snippet.</p>
+        <p class="red">Alpha release. Expect bugs. <a href="https://github.com/jamiegoodwin/searchthesourcecode" target="_blank">It's on GitHub.</a></p>
 
         <form name="search">
           <input autocomplete="off" type="text" name="domain" placeholder="Domain to search"></input>
@@ -59,6 +60,10 @@
       </div>
       <div class="results"></div>
     </div>
+    <footer class="center">
+      <a href="https://jamiegoodwin.uk/?utm_campaign=Development&utm_source=searchthesourcecode.com" target="_blank"><img src="https://jamiegoodwin.uk/assets/images/2015/07/me-circle.png" height="40" width="40" /></a>
+      <p>Built with <span class="love">&hearts;</span> and &copy; 2017 by <a href="https://jamiegoodwin.uk/?utm_campaign=Development&utm_source=searchthesourcecode.com" target="_blank">Jamie Goodwin</a></p>
+    </footer>
 
     <!-- CSS -->
     <style>
@@ -69,6 +74,9 @@
         font-family: monospace;
         background-image: url('code.jpg');
         background-size: cover;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
       }
 
       @media (max-width: 767px) {
@@ -84,6 +92,7 @@
         padding: 10px;
         box-sizing: border-box;
         text-align: left;
+        flex: 1;
       }
 
       hr {
@@ -217,6 +226,14 @@
       .results ul li span {
         color: #DDD;
         font-size: 0.8em;
+      }
+
+      .love, .red {
+        color: #c60200;
+      }
+
+      .love {
+        font-size: 120%;
       }
 
       .loader,
