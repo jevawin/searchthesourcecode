@@ -1,3 +1,9 @@
+/* TO DO
+ *
+ * Configure database https://fauna.com
+ * 
+ */
+
 /* Variables */
 var
   // Dependencies
@@ -6,10 +12,10 @@ var
   URL = require('url-parse'),
   express = require('express'),
   escape = require('escape-html')
-  //Promise = require('promise'),
+//Promise = require('promise'),
 
-  // Configuration
-  app = express(),
+// Configuration
+app = express(),
   port = process.env.PORT || 8080,
 
   // App variables
@@ -46,7 +52,7 @@ app.get('/', function (req, res) {
   // Validate and correct URL
   request(options, function () {
     url = new URL(loc),
-    baseURL = url.protocol + "//" + url.hostname;
+      baseURL = url.protocol + "//" + url.hostname;
 
     // Initiate crawl
     pagesToVisit.push(loc);
