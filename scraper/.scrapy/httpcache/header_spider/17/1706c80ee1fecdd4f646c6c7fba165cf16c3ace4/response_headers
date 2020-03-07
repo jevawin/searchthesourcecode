@@ -1,0 +1,14 @@
+Date: Sat, 07 Mar 2020 15:59:21 GMT
+Content-Type: text/html
+Set-Cookie: AWSALB=erHE97XeY3RV4C1+zOkyClyGeOz49z9xYoFB3xvaNks+GEJd/SqcxSee9OjM1iIWGbXBOkEP609b9blKr6CUNjvvx/mbnncX8ADyCTj5E/wxnBT8t8oZZwQ6CLSQ; Expires=Sat, 14 Mar 2020 15:59:20 GMT; Path=/
+Set-Cookie: AWSALBCORS=erHE97XeY3RV4C1+zOkyClyGeOz49z9xYoFB3xvaNks+GEJd/SqcxSee9OjM1iIWGbXBOkEP609b9blKr6CUNjvvx/mbnncX8ADyCTj5E/wxnBT8t8oZZwQ6CLSQ; Expires=Sat, 14 Mar 2020 15:59:20 GMT; Path=/; SameSite=None; Secure
+Set-Cookie: HILLARYS_SITEUSER_ID=HILS0025353456; path=/; expires=Mon, 07-Mar-2022 15:59:20 GMT; domain=.hillarys.co.uk
+Cache-Control: private
+Vary: Accept,Accept-Encoding
+X-Powered-By: ARR/3.0
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 570585ea2f26e698-LHR
+Content-Encoding: gzip

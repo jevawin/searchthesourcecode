@@ -1,0 +1,12 @@
+Date: Sat, 07 Mar 2020 16:05:24 GMT
+Content-Type: text/html
+Set-Cookie: AWSALB=ve/SkbH1zkyamV0x4p6QVMdyOa/WrRPYfywpW27iIKPH4NvQqXVsycKV8RWc3HZgEczDe3ySB2zJh+iPAsIDNvaz/zzFn6oxfj4xGpf8sw+ZKZzR+kVyQMbv2xnW; Expires=Sat, 14 Mar 2020 16:05:23 GMT; Path=/
+Set-Cookie: AWSALBCORS=ve/SkbH1zkyamV0x4p6QVMdyOa/WrRPYfywpW27iIKPH4NvQqXVsycKV8RWc3HZgEczDe3ySB2zJh+iPAsIDNvaz/zzFn6oxfj4xGpf8sw+ZKZzR+kVyQMbv2xnW; Expires=Sat, 14 Mar 2020 16:05:23 GMT; Path=/; SameSite=None; Secure
+Cache-Control: private
+Location: /blinds-range/
+X-Powered-By: ARR/3.0
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 57058ec8cc8be5e8-LHR

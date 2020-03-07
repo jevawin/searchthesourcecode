@@ -1,0 +1,20 @@
+Date: Sat, 07 Mar 2020 13:42:01 GMT
+Content-Type: text/html; charset=utf-8
+Set-Cookie: __cfduid=d4c50eab15343a4966474555bc7b9c82b1583588521; expires=Mon, 06-Apr-20 13:42:01 GMT; path=/; domain=.isvarnishworking.uk; HttpOnly; SameSite=Lax
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
+X-Proxy-Cache: MISS
+X-Github-Request-Id: F95C:23D2:1D54D0:24B0F8:5E63A4A9
+Via: 1.1 varnish
+X-Served-By: cache-lcy19259-LCY
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1583588521.378866,VS0,VE307
+Vary: Accept-Encoding
+X-Fastly-Request-Id: d8f4838c307f599749072035488184b12ab52c35
+Cache-Control: max-age=14400
+Cf-Cache-Status: EXPIRED
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 5704bcc26b6edc4f-LHR
+Content-Encoding: gzip

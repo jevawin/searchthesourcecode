@@ -1,0 +1,22 @@
+Cache-Control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+Content-Encoding: gzip
+Content-Type: text/html;charset=utf-8
+Date: Sat, 07 Mar 2020 13:42:02 GMT
+Expires: Tue, 31 Mar 1981 05:00:00 GMT
+Last-Modified: Sat, 07 Mar 2020 13:42:02 GMT
+Pragma: no-cache
+Server: tsa_f
+Set-Cookie: fm=0; Max-Age=0; Expires=Sat, 7 Mar 2020 13:42:02 GMT; Path=/; Domain=.twitter.com; Secure; HTTPOnly
+Set-Cookie: _twitter_sess=BAh7CSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7ADoPY3JlYXRlZF9hdGwrCJg2O7VwAToMY3NyZl9p%250AZCIlODA1MTIzYTM4NWE0ODM1ZmM1YjFhYWRiNWQ3YmQ2NGQ6B2lkIiViYmUz%250AYzNmYTEzNmJjOTUyODIyMzU1MWEyZjEwODI2NA%253D%253D--cb48a8e5640aaf7f7bd48234963f8103e807788f; Path=/; Domain=.twitter.com; Secure; HTTPOnly
+Set-Cookie: external_referer=padhuUp37zjm%2Br%2BqLOYJky1eAH9S4oVpGwObGMqc1ERmQ213gCcagZegQq00JN2RGL1EDxf7xvM%3D|0|8e8t2xd8A2w%3D; Max-Age=604800; Expires=Sat, 14 Mar 2020 13:42:02 GMT; Path=/; Domain=.twitter.com
+Set-Cookie: ct0=98103299b9de4fa8fd1f990e185a5ff9; Max-Age=21600; Expires=Sat, 7 Mar 2020 19:42:02 GMT; Path=/; Domain=.twitter.com; Secure
+Status: 200 OK
+Strict-Transport-Security: max-age=631138519
+X-Connection-Hash: 6c1f2036027d081a20785768740acaef
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Response-Time: 659
+X-Transaction: 003ecba3005adf65
+X-Twitter-Response-Tags: BouncerCompliant
+X-Ua-Compatible: IE=edge,chrome=1
+X-Xss-Protection: 0

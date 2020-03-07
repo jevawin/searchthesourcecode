@@ -1,0 +1,13 @@
+Date: Sat, 07 Mar 2020 16:05:19 GMT
+Content-Type: text/html
+Set-Cookie: AWSALB=tbbQs3Wazp/628Jsk5LmK5o8btkBABIQXNhe5czdeqd8qvBs0y2jYpEJQAmhELgZBnYjUTDUPpbcvlEcnBWaWNau4WgYKIZ3YIggGtOD0wc80nX7iPQ7Jx/MDiAs; Expires=Sat, 14 Mar 2020 16:05:19 GMT; Path=/
+Set-Cookie: AWSALBCORS=tbbQs3Wazp/628Jsk5LmK5o8btkBABIQXNhe5czdeqd8qvBs0y2jYpEJQAmhELgZBnYjUTDUPpbcvlEcnBWaWNau4WgYKIZ3YIggGtOD0wc80nX7iPQ7Jx/MDiAs; Expires=Sat, 14 Mar 2020 16:05:19 GMT; Path=/; SameSite=None; Secure
+Cache-Control: private
+Vary: Accept,Accept-Encoding
+X-Powered-By: ARR/3.0
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 57058eaa3b2ae634-LHR
+Content-Encoding: gzip

@@ -1,0 +1,17 @@
+Server: Apache
+Strict-Transport-Security: max-age=31536000
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+Content-Security-Policy: default-src 'self'  *.apple.com;
+X-Content-Type-Options: nosniff
+Last-Modified: Wed, 26 Feb 2020 09:12:40 GMT
+Etag: "564-59f7701a28640"
+Accept-Ranges: bytes
+X-Server: (null)
+Content-Type: text/plain; charset=utf-8
+Cache-Control: public, no-transform, max-age=3361
+Date: Sat, 07 Mar 2020 13:42:01 GMT
+X-Cache: TCP_REFRESH_HIT from a2-16-167-23.deploy.akamaitechnologies.com (AkamaiGHost/9.9.2.3-28842850) (S)
+X-True-Cache-Key: /L/itunes.apple.com/robots.txt vcd=2897
+X-Cache-Remote: TCP_REFRESH_HIT from a2-16-167-54.deploy.akamaitechnologies.com (AkamaiGHost/9.9.2.3-28842850) (S)
+X-Apple-Partner: origin.0

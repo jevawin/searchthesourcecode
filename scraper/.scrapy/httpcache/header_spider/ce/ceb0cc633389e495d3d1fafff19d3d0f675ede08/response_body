@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Error</title>
+    <link href="/Content/css?v=GrPysCaLCbcz5_P958aKJMwHJQY9xr2fuBEiGpll9rk1" rel="stylesheet"/>
+
+    <link href="/Content/fontawesome?v=3iEv8vqPidB6TVfgNOGrLoJr-SPH_mV3YwpggEk2_ao1" rel="stylesheet"/>
+
+    <script src="/bundles/jquery?v=gkWyJthHPtwkFjvHuNinBjchIfwLwc_KbE-H26J2kAI1"></script>
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+    <script src="/bundles/site?v=hjBrQK17pbmyP87BP54OjfDrYZ69IduIby0TUe5lGfU1"></script>
+
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <!-- Static navbar -->
+ 
+
+
+
+        
+<script>
+    $(document).ready(function () {
+
+        $('#chooseDropBox').after('<div style="clear:both;"></div><div class="clearfix acceptedFileType" style="margin-top:5px; font-style: italic;"><small>We accept .doc, .docx, .pdf, .odt, .rtf, .txt, maximum 3 MB</small></div>');
+
+        $('input[type="file"]').attr('accept', '.doc,.docx,.pdf,.odt,.rtf,.txt');
+
+        $('INPUT[type="file"]').change(function () {
+            var lastExt = this.value.split('.');
+            var ext = lastExt[lastExt.length - 1];
+            switch (ext) {
+                case 'doc':
+                case 'docx':
+                case 'odt':
+                case 'rtf':
+                case 'pdf':
+                case 'txt':
+                    $('.fileTypeError').remove();
+
+                    return;
+                default:
+                    $(this).val('');
+                    $('.acceptedFileType').after('<div class="form-group" style="margin-top:5px;"><label class="error fileTypeError">* We only accept doc, .docx, .pdf, .odt, .rtf, .txt, maximum 3 MB</label></div>');
+                    $('#selectedFileName').val('');
+
+                    break;
+            }
+        });
+
+        GetPrivacyStatement();
+
+    });
+
+    function GetPrivacyStatement() {
+        if ($("#appForm").length) {
+
+            var webApiUrl = 'https://postingpandaapi-live.azurewebsites.net/api/datapolicies';
+            var params = { clientDomain: location.hostname };
+
+            $.ajax({
+                url: webApiUrl,
+                type: "GET",
+                dataType: "json",
+                data: params,
+                cache: false,
+                success: function (data) {
+                    CreatePrivacyStatement(data.PrivacyStatement);
+                },
+                error: function (object, status, errorThrown) {
+
+                }
+            });
+        }
+    }
+
+    function CreatePrivacyStatement(policyStatement) {
+        $('.wrapper').after('<div class="GDPR"style="width:50%;margin:0 auto;text-align:center;">' + '<p>' + policyStatement + '</p></div>');
+    }
+</script>
+
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+<!--
+
+The view &#39;careershillaryscouk/cookie-information/index&#39; or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/Home/careershillaryscouk/cookie-information/index.aspx
+~/Views/Home/careershillaryscouk/cookie-information/index.ascx
+~/Views/Shared/careershillaryscouk/cookie-information/index.aspx
+~/Views/Shared/careershillaryscouk/cookie-information/index.ascx
+~/Views/Home/careershillaryscouk/cookie-information/index.cshtml
+~/Views/Home/careershillaryscouk/cookie-information/index.vbhtml
+~/Views/Shared/careershillaryscouk/cookie-information/index.cshtml
+~/Views/Shared/careershillaryscouk/cookie-information/index.vbhtml
+
+
+   at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)
+    
+
+
+-->
+
+
+
+        <div class="push"></div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <hr />
+            <p>&copy; 2020 - Posting Panda</p>
+        </div>
+    </div>
+
+
+    <script src="/bundles/bootstrap?v=-ktyuuYVm8reiCqek-REkH9kFQQZ53F1Ay-TXz9RIew1"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+Date: Sat, 07 Mar 2020 13:30:51 GMT
+Content-Type: text/plain; charset=utf-8
+Set-Cookie: __cfduid=d39b650932aade0c46aea5cda550cbef41583587850; expires=Mon, 06-Apr-20 13:30:50 GMT; path=/; domain=.blog.scrapinghub.com; HttpOnly; SameSite=Lax
+Set-Cookie: __cfruid=deb5adb1913e94af8474f1d5e1936cb1866cd903-1583587851; path=/; domain=.blog.scrapinghub.com; HttpOnly; Secure; SameSite=None
+Cache-Control: s-maxage=120, max-age=5
+Etag: W/"1f769a737c724c5f261165087d721d31"
+Last-Modified: Sat, 07 Mar 2020 00:52:19 GMT
+Cf-Cache-Status: EXPIRED
+Cache-Tag: P-4367560,SS-5622508161,PGS-ALL,SW-1,SD-10
+Edge-Cache-Tag: P-4367560,SS-5622508161,PGS-ALL,SW-1,SD-10
+X-Hs-Hub-Id: 4367560
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 5704ac636bcbf403-LHR
+Content-Encoding: gzip

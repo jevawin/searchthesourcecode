@@ -1,0 +1,8 @@
+Date: Sat, 07 Mar 2020 13:42:01 GMT
+Cache-Control: max-age=3600
+Expires: Sat, 07 Mar 2020 14:42:01 GMT
+Location: https://ghost.org/docs/installation/deploy/
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 5704bcc2285c6a89-LHR

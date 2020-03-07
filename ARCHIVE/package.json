@@ -1,0 +1,17 @@
+{
+  "name": "searchthesourcecode",
+  "version": "0.0.0",
+  "description": "Searches websites' source code for keywords and phrases.",
+  "author": "@iamjamiegoodwin",
+  "license": "ISC",
+  "scripts": {
+    "start": "node service/index.js"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "escape-html": "^1.0.3",
+    "express": "^4.17.1",
+    "request": "^2.65.0",
+    "url-parse": "^1.0.5"
+  }
+}

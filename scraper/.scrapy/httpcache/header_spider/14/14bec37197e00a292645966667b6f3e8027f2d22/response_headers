@@ -1,0 +1,20 @@
+Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+Access-Control-Allow-Methods: HEAD, GET, POST, OPTIONS
+Access-Control-Expose-Headers: Content-Length,Content-Range
+Content-Encoding: gzip
+Content-Type: text/html
+Date: Sat, 07 Mar 2020 13:42:01 GMT
+Expires: Fri, 06 Mar 2020 13:42:01 GMT
+Pagespeed: off
+Response: 403
+Server: nginx/1.16.0
+Set-Cookie: ezoadgid_123168=-1; Path=/; Domain=idownloadblog.com; Expires=Sat, 07 Mar 2020 14:12:01 UTC
+Set-Cookie: ezoref_123168=; Path=/; Domain=idownloadblog.com; Expires=Sat, 07 Mar 2020 15:42:01 UTC
+Set-Cookie: ezoab_123168=mod59-c; Path=/; Domain=idownloadblog.com; Expires=Sat, 07 Mar 2020 15:42:01 UTC
+Set-Cookie: active_template::123168=pub_site.1583588521; Path=/; Domain=idownloadblog.com; Expires=Mon, 09 Mar 2020 13:42:01 UTC
+Set-Cookie: ezCMPCCS=false; Path=/; Domain=idownloadblog.com; Expires=Sun, 07 Mar 2021 13:42:01 GMT
+Vary: Accept-Encoding,User-Agent,X-APP-JSON
+X-Ezoic-Cdn: Miss
+X-Middleton-Response: 403
+X-Request-Id: 31e9c1cdf47b9dbce1bd76962788d37f
+X-Sol: pub_site

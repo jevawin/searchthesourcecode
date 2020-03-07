@@ -1,0 +1,21 @@
+Date: Sat, 07 Mar 2020 13:42:02 GMT
+Content-Type: text/html; charset=utf-8
+Last-Modified: Sun, 29 Dec 2019 16:49:09 GMT
+Access-Control-Allow-Origin: *
+Expires: Sat, 07 Mar 2020 13:52:02 GMT
+Cache-Control: max-age=600
+X-Proxy-Cache: MISS
+X-Github-Request-Id: BF38:7D15:53775E:66E27D:5E63A4A9
+Via: 1.1 varnish
+Age: 0
+X-Served-By: cache-lcy19232-LCY
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1583588522.730650,VS0,VE315
+Vary: Accept-Encoding
+X-Fastly-Request-Id: d25515ce7f928222193f55ddbf4143c3ab44cdac
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 5704bcc4cff6dc4f-LHR
+Content-Encoding: gzip

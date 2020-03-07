@@ -1,0 +1,14 @@
+Cache-Control: public, max-age=3600
+Content-Type: text/html
+Date: Sat, 07 Mar 2020 13:42:01 GMT
+Display: staticcontent_sol
+Location: https://www.idownloadblog.com/robots.txt
+Pagespeed: off
+Response: 301
+Server: nginx/1.16.0
+Vary: Accept-Encoding,User-Agent,Origin,X-APP-JSON
+X-Ezoic-Cdn: Hit ds;mm;3522c3fb1bb8792388acd811807db767;2-123168-3;ad372eb0-11c2-42d7-7ff4-67213954a289
+X-Middleton-Display: staticcontent_sol
+X-Middleton-Response: 301
+X-Presslabs-Stats: desktop
+X-Request-Id: 9cf923de1f3ab58c46581c611dc520eb
