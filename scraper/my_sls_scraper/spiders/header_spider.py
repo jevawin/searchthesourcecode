@@ -1,10 +1,13 @@
 import scrapy
 from scrapy.linkextractors.lxmlhtml import LxmlLinkExtractor
+import re
+import json
 
 
 def netball_team(body):
-    query = "DOCTYPE"
-    result = body.find(query)
+    query = "[.+?]"
+    # result = [r.start() for r in re.finditer(re.escape(query), body)]
+    result = [r.start() for r in re.finditer(query, body)]
     return result
 
 
@@ -17,11 +20,13 @@ class HeaderSpider(scrapy.Spider):
         url = response.url
         body = response.text
         matches = netball_team(body)
+        count = len(matches)
 
         # yield {'url': response.url, 'response': response.text}
         yield {
             'url': url,
-            'matches': matches
+            'matches': json.dumps(matches),
+            'count': count
         }
 
         trending_links = LxmlLinkExtractor(
