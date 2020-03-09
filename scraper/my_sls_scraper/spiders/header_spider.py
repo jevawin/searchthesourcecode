@@ -2,12 +2,12 @@ import scrapy
 from scrapy.linkextractors.lxmlhtml import LxmlLinkExtractor
 import re
 import json
+import sys
 
 
-def netball_team(body):
-    query = "[.+?]"
-    # result = [r.start() for r in re.finditer(re.escape(query), body)]
-    result = [r.start() for r in re.finditer(query, body)]
+def netball_team(body, query):
+    result = [r.start() for r in re.finditer(re.escape(query), body)]
+    # result = [r.start() for r in re.finditer(query, body)]
     return result
 
 
@@ -19,7 +19,7 @@ class HeaderSpider(scrapy.Spider):
     def parse(self, response):
         url = response.url
         body = response.text
-        matches = netball_team(body)
+        matches = netball_team(body, self.query)
         count = len(matches)
 
         # yield {'url': response.url, 'response': response.text}
