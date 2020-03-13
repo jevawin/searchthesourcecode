@@ -5,6 +5,8 @@ feed
 # misc
 [Tt]humbs.db
 .DS_Store
+.vscode
+.scrapy
 
 # logs
 logs
