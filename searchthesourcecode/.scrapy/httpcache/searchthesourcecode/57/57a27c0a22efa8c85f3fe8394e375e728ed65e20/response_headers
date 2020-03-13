@@ -1,7 +1,0 @@
-Server: nginx
-Date: Fri, 13 Mar 2020 12:37:16 GMT
-Content-Type: text/html; charset=UTF-8
-Vary: Accept-Encoding
-Link: <https://bbpress.org/wp-json/>; rel="https://api.w.org/"
-X-Frame-Options: SAMEORIGIN
-Content-Encoding: gzip

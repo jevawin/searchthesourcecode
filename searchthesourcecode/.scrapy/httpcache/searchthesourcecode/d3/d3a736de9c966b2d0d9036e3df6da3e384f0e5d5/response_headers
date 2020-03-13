@@ -1,7 +1,0 @@
-Cache-Control: public, max-age=0, must-revalidate
-Content-Type: text/html; charset=utf-8
-Date: Fri, 13 Mar 2020 14:46:07 GMT
-Etag: 1577806367-ssl
-Age: 9
-Server: Netlify
-X-Nf-Request-Id: 349862ee-2018-4afa-9a05-13ee7e97f77a-13005751

@@ -1,8 +1,0 @@
-Date: Fri, 13 Mar 2020 14:30:28 GMT
-Cache-Control: max-age=3600
-Expires: Fri, 13 Mar 2020 15:30:28 GMT
-Location: https://ghost.org/docs/installation/linux/
-Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-Vary: Accept-Encoding
-Server: cloudflare
-Cf-Ray: 573673fcbc6b3681-MAN

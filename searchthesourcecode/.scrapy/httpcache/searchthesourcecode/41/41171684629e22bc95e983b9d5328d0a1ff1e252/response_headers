@@ -1,9 +1,0 @@
-Content-Encoding: gzip
-Content-Type: text/plain;charset=utf-8
-Date: Fri, 13 Mar 2020 12:36:26 GMT
-Server: tsa_f
-Set-Cookie: personalization_id="v1_x+tK3e0zkYcKsfJuPz/31Q=="; Max-Age=63072000; Expires=Sun, 13 Mar 2022 12:36:26 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
-Set-Cookie: guest_id=v1%3A158410298642019980; Max-Age=63072000; Expires=Sun, 13 Mar 2022 12:36:26 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
-Strict-Transport-Security: max-age=631138519
-X-Connection-Hash: 103e70523afd9881135e8cf2bdd976a9
-X-Response-Time: 114

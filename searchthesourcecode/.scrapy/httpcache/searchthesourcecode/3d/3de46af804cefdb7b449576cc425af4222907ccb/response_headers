@@ -1,9 +1,0 @@
-Server: nginx
-Date: Fri, 13 Mar 2020 12:37:24 GMT
-Content-Type: text/html; charset=UTF-8
-Content-Language: th
-Vary: Accept-Encoding,Cookie,User-Agent
-X-Vary-Options: Accept-Encoding;list-contains=gzip,Cookie;string-contains=kazama_wordwiki_wp_Token;string-contains=kazama_wordwiki_wp_LoggedOut;string-contains=kazama_wordwiki_wp__session
-Expires: Thu, 01 Jan 1970 00:00:00 GMT
-Cache-Control: private, must-revalidate, max-age=0
-Content-Encoding: gzip

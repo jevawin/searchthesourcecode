@@ -1,8 +1,0 @@
-User-agent: Mediapartners-Google 
-Disallow:
-
-User-agent: *
-Disallow: /wp-login.php
-Disallow: /wp-admin/
-
-Sitemap: https://www.idownloadblog.com/sitemap_index.xml

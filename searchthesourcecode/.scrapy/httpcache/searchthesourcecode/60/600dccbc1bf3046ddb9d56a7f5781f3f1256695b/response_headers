@@ -1,9 +1,0 @@
-Server: nginx
-Date: Fri, 13 Mar 2020 12:37:19 GMT
-Content-Type: text/html; charset=utf-8
-X-Content-Type-Options: nosniff
-Vary: Accept-Encoding, Cookie
-Expires: Thu, 01 Jan 1970 00:00:00 GMT
-Cache-Control: private, must-revalidate, max-age=0
-Location: https://codex.wordpress.org/zh-cn:%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8F%8F%E8%BF%B0
-Strict-Transport-Security: max-age=31536000

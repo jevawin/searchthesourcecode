@@ -1,4 +1,0 @@
-User-Agent: *
-Disallow: /wp-admin/
-Allow: /wp-admin/admin-ajax.php
-Sitemap: https://wpza.net/sitemap_index.xml

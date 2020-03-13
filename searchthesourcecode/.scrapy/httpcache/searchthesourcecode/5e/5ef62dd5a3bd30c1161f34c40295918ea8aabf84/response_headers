@@ -1,9 +1,0 @@
-Server: nginx
-Date: Fri, 13 Mar 2020 12:37:18 GMT
-Content-Type: text/html; charset=utf-8
-Vary: Accept-Encoding
-Set-Cookie: PHPSESSID=ha33th7n2medivnc52k49vc2cg; expires=Sun, 15-Mar-2020 12:37:18 GMT; Max-Age=172800; path=/
-Expires: Thu, 19 Nov 1981 08:52:00 GMT
-Cache-Control: no-store, no-cache, must-revalidate
-Pragma: no-cache
-Content-Encoding: gzip

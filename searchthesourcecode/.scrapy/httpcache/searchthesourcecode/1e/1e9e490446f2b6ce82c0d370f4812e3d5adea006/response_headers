@@ -1,9 +1,0 @@
-Server: nginx
-Date: Fri, 13 Mar 2020 12:37:25 GMT
-Content-Type: text/html; charset=utf-8
-Vary: Accept-Encoding
-Link: <https://make.wordpress.org/themes/wp-json/>; rel="https://api.w.org/"
-X-Olaf: ⛄
-X-Frame-Options: SAMEORIGIN
-X-Nc: MISS ord 1
-Content-Encoding: gzip
