@@ -1,0 +1,10 @@
+Server: nginx
+Date: Fri, 13 Mar 2020 12:37:29 GMT
+Content-Type: text/html; charset=UTF-8
+X-Olaf: ⛄
+Expires: Wed, 11 Jan 1984 05:00:00 GMT
+Cache-Control: no-cache, must-revalidate, max-age=0
+X-Redirect-By: WordPress
+Location: https://make.wordpress.org/themes/handbook/review/required/
+X-Frame-Options: SAMEORIGIN
+X-Nc: MISS ord 1

@@ -1,0 +1,23 @@
+Date: Fri, 13 Mar 2020 12:36:02 GMT
+Cache-Control: s-maxage=3600, must-revalidate, max-age=0
+Vary: X-Subdomain
+Server: ATS/8.0.6
+X-Ats-Timestamp: 1584102962
+Content-Type: text/plain; charset=utf-8
+X-Powered-By: PHP/7.2.26-1+0~20191218.33+debian9~1.gbpb5a340+wmf1
+X-Content-Type-Options: nosniff
+X-Article-Id: 137623
+X-Language: meta
+X-Site: wikipedia
+Last-Modified: Mon, 30 Sep 2019 21:40:32 GMT
+Backend-Timing: D=28016 t=1583555639147390
+Content-Encoding: gzip
+X-Varnish: 221416995 218341863
+Age: 78
+X-Cache: cp3052 hit, cp3058 hit/1
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+X-Client-Ip: 89.197.157.66
+Set-Cookie: GeoIP=GB:ENG:Manchester:53.48:-2.24:v4; Path=/; secure; Domain=.wikimedia.org
+Accept-Ranges: bytes

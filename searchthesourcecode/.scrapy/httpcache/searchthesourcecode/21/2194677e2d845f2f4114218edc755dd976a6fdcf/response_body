@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Files...</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="/fancyindex/css/fancyindex.css">
+  <script>
+    var path = location.pathname;
+    document.title = path;
+  </script>
+</head>
+<body>
+<div class="box box-breadcrumbs">
+    <div class="box-header">
+      <div class="box-header-content">
+        <div id="breadcrumbs" class="breadcrumbs">
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+    <div class="box-content clearfix">
+      <h1>Index of: 
+/releases/android/arm/old/</h1>
+<table id="list"><thead><tr><th style="width:55%"><a href="?C=N&O=A">File Name</a>&nbsp;<a href="?C=N&O=D">&nbsp;&darr;&nbsp;</a></th><th style="width:20%"><a href="?C=S&O=A">File Size</a>&nbsp;<a href="?C=S&O=D">&nbsp;&darr;&nbsp;</a></th><th style="width:25%"><a href="?C=M&O=A">Date</a>&nbsp;<a href="?C=M&O=D">&nbsp;&darr;&nbsp;</a></th></tr></thead>
+<tbody><tr><td class="link"><a href="../">Parent directory/</a></td><td class="size">-</td><td class="date">-</td></tr><tr><td class="link"><a href="kodi-18.4-Leia-armeabi-v7a.apk" title="kodi-18.4-Leia-armeabi-v7a.apk">kodi-18.4-Leia-armeabi-v7a.apk</a></td><td class="size">60.3 MiB</td><td class="date">2019-Sep-01 10:07</td></tr>
+<tr><td class="link"><a href="kodi-18.3-Leia-armeabi-v7a.apk" title="kodi-18.3-Leia-armeabi-v7a.apk">kodi-18.3-Leia-armeabi-v7a.apk</a></td><td class="size">60.3 MiB</td><td class="date">2019-Jun-28 10:25</td></tr>
+<tr><td class="link"><a href="kodi-18.2-Leia-armeabi-v7a.apk" title="kodi-18.2-Leia-armeabi-v7a.apk">kodi-18.2-Leia-armeabi-v7a.apk</a></td><td class="size">60.3 MiB</td><td class="date">2019-Apr-22 12:57</td></tr>
+<tr><td class="link"><a href="kodi-18.2-Leia_rc1-armeabi-v7a.apk" title="kodi-18.2-Leia_rc1-armeabi-v7a.apk">kodi-18.2-Leia_rc1-armeabi-v7a.apk</a></td><td class="size">60.3 MiB</td><td class="date">2019-Apr-14 19:59</td></tr>
+<tr><td class="link"><a href="kodi-18.1-Leia-armeabi-v7a.apk" title="kodi-18.1-Leia-armeabi-v7a.apk">kodi-18.1-Leia-armeabi-v7a.apk</a></td><td class="size">60.2 MiB</td><td class="date">2019-Feb-17 09:16</td></tr>
+<tr><td class="link"><a href="kodi-18.1-Leia_rc1-armeabi-v7a.apk" title="kodi-18.1-Leia_rc1-armeabi-v7a.apk">kodi-18.1-Leia_rc1-armeabi-v7a.apk</a></td><td class="size">60.2 MiB</td><td class="date">2019-Feb-11 07:01</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia-armeabi-v7a.apk" title="kodi-18.0-Leia-armeabi-v7a.apk">kodi-18.0-Leia-armeabi-v7a.apk</a></td><td class="size">60.1 MiB</td><td class="date">2019-Jan-28 18:31</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_rc5.2-armeabi-v7a.apk" title="kodi-18.0-Leia_rc5.2-armeabi-v7a.apk">kodi-18.0-Leia_rc5.2-armeabi-v7a.apk</a></td><td class="size">60.0 MiB</td><td class="date">2019-Jan-12 20:11</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_rc5-armeabi-v7a.apk" title="kodi-18.0-Leia_rc5-armeabi-v7a.apk">kodi-18.0-Leia_rc5-armeabi-v7a.apk</a></td><td class="size">60.1 MiB</td><td class="date">2019-Jan-11 20:22</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_rc4-armeabi-v7a.apk" title="kodi-18.0-Leia_rc4-armeabi-v7a.apk">kodi-18.0-Leia_rc4-armeabi-v7a.apk</a></td><td class="size">60.0 MiB</td><td class="date">2018-Dec-28 17:10</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_rc3-armeabi-v7a.apk" title="kodi-18.0-Leia_rc3-armeabi-v7a.apk">kodi-18.0-Leia_rc3-armeabi-v7a.apk</a></td><td class="size">59.9 MiB</td><td class="date">2018-Dec-16 10:06</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_rc2-armeabi-v7a.apk" title="kodi-18.0-Leia_rc2-armeabi-v7a.apk">kodi-18.0-Leia_rc2-armeabi-v7a.apk</a></td><td class="size">59.9 MiB</td><td class="date">2018-Dec-03 16:32</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_rc1-armeabi-v7a.apk" title="kodi-18.0-Leia_rc1-armeabi-v7a.apk">kodi-18.0-Leia_rc1-armeabi-v7a.apk</a></td><td class="size">59.8 MiB</td><td class="date">2018-Nov-21 19:06</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_beta5-armeabi-v7a.apk" title="kodi-18.0-Leia_beta5-armeabi-v7a.apk">kodi-18.0-Leia_beta5-armeabi-v7a.apk</a></td><td class="size">59.7 MiB</td><td class="date">2018-Nov-03 20:30</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_beta4-armeabi-v7a.apk" title="kodi-18.0-Leia_beta4-armeabi-v7a.apk">kodi-18.0-Leia_beta4-armeabi-v7a.apk</a></td><td class="size">59.6 MiB</td><td class="date">2018-Oct-23 12:17</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_beta3-armeabi-v7a.apk" title="kodi-18.0-Leia_beta3-armeabi-v7a.apk">kodi-18.0-Leia_beta3-armeabi-v7a.apk</a></td><td class="size">89.0 MiB</td><td class="date">2018-Oct-02 18:11</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_beta2-armeabi-v7a.apk" title="kodi-18.0-Leia_beta2-armeabi-v7a.apk">kodi-18.0-Leia_beta2-armeabi-v7a.apk</a></td><td class="size">92.9 MiB</td><td class="date">2018-Sep-09 19:00</td></tr>
+<tr><td class="link"><a href="kodi-18.0-Leia_beta1-armeabi-v7a.apk" title="kodi-18.0-Leia_beta1-armeabi-v7a.apk">kodi-18.0-Leia_beta1-armeabi-v7a.apk</a></td><td class="size">92.9 MiB</td><td class="date">2018-Aug-26 11:54</td></tr>
+<tr><td class="link"><a href="kodi-17.5.1-Krypton-armeabi-v7a.apk" title="kodi-17.5.1-Krypton-armeabi-v7a.apk">kodi-17.5.1-Krypton-armeabi-v7a.apk</a></td><td class="size">82.8 MiB</td><td class="date">2017-Oct-24 17:59</td></tr>
+<tr><td class="link"><a href="kodi-17.5-Krypton-armeabi-v7a.apk" title="kodi-17.5-Krypton-armeabi-v7a.apk">kodi-17.5-Krypton-armeabi-v7a.apk</a></td><td class="size">82.8 MiB</td><td class="date">2017-Oct-23 07:19</td></tr>
+<tr><td class="link"><a href="kodi-17.4-Krypton-armeabi-v7a.apk" title="kodi-17.4-Krypton-armeabi-v7a.apk">kodi-17.4-Krypton-armeabi-v7a.apk</a></td><td class="size">82.8 MiB</td><td class="date">2017-Aug-22 08:46</td></tr>
+<tr><td class="link"><a href="kodi-17.4-Krypton_rc1-armeabi-v7a.apk" title="kodi-17.4-Krypton_rc1-armeabi-v7a.apk">kodi-17.4-Krypton_rc1-armeabi-v7a.apk</a></td><td class="size">82.4 MiB</td><td class="date">2017-Aug-10 17:52</td></tr>
+<tr><td class="link"><a href="kodi-17.3-Krypton-armeabi-v7a.apk" title="kodi-17.3-Krypton-armeabi-v7a.apk">kodi-17.3-Krypton-armeabi-v7a.apk</a></td><td class="size">83.4 MiB</td><td class="date">2017-May-24 22:03</td></tr>
+<tr><td class="link"><a href="kodi-17.2-Krypton-armeabi-v7a.apk" title="kodi-17.2-Krypton-armeabi-v7a.apk">kodi-17.2-Krypton-armeabi-v7a.apk</a></td><td class="size">82.9 MiB</td><td class="date">2017-May-23 17:29</td></tr>
+<tr><td class="link"><a href="kodi-17.1-Krypton-armeabi-v7a.apk" title="kodi-17.1-Krypton-armeabi-v7a.apk">kodi-17.1-Krypton-armeabi-v7a.apk</a></td><td class="size">83.3 MiB</td><td class="date">2017-Mar-20 18:00</td></tr>
+<tr><td class="link"><a href="kodi-17.0-Krypton-armeabi-v7a.apk" title="kodi-17.0-Krypton-armeabi-v7a.apk">kodi-17.0-Krypton-armeabi-v7a.apk</a></td><td class="size">83.3 MiB</td><td class="date">2017-Feb-01 20:15</td></tr>
+<tr><td class="link"><a href="kodi-16.1-Jarvis-symbols-armeabi-v7a.tar.bz2" title="kodi-16.1-Jarvis-symbols-armeabi-v7a.tar.bz2">kodi-16.1-Jarvis-symbols-armeabi-v7a.tar.bz2</a></td><td class="size">11.1 MiB</td><td class="date">2016-Apr-24 10:11</td></tr>
+<tr><td class="link"><a href="kodi-16.1-Jarvis-armeabi-v7a.apk" title="kodi-16.1-Jarvis-armeabi-v7a.apk">kodi-16.1-Jarvis-armeabi-v7a.apk</a></td><td class="size">59.0 MiB</td><td class="date">2016-Apr-24 10:11</td></tr>
+<tr><td class="link"><a href="kodi-16.0-Jarvis-symbols-armeabi-v7a.tar.bz2" title="kodi-16.0-Jarvis-symbols-armeabi-v7a.tar.bz2">kodi-16.0-Jarvis-symbols-armeabi-v7a.tar.bz2</a></td><td class="size">11.1 MiB</td><td class="date">2016-Feb-20 16:29</td></tr>
+<tr><td class="link"><a href="kodi-16.0-Jarvis-armeabi-v7a.apk" title="kodi-16.0-Jarvis-armeabi-v7a.apk">kodi-16.0-Jarvis-armeabi-v7a.apk</a></td><td class="size">59.0 MiB</td><td class="date">2016-Feb-20 16:29</td></tr>
+<tr><td class="link"><a href="kodi-15.2-Isengard-armeabi-v7a.apk" title="kodi-15.2-Isengard-armeabi-v7a.apk">kodi-15.2-Isengard-armeabi-v7a.apk</a></td><td class="size">57.8 MiB</td><td class="date">2015-Oct-19 07:50</td></tr>
+<tr><td class="link"><a href="kodi-15.1.1-Isengard-armeabi-v7a.apk" title="kodi-15.1.1-Isengard-armeabi-v7a.apk">kodi-15.1.1-Isengard-armeabi-v7a.apk</a></td><td class="size">57.9 MiB</td><td class="date">2015-Aug-22 08:41</td></tr>
+<tr><td class="link"><a href="kodi-15.1-Isengard-armeabi-v7a.apk" title="kodi-15.1-Isengard-armeabi-v7a.apk">kodi-15.1-Isengard-armeabi-v7a.apk</a></td><td class="size">57.8 MiB</td><td class="date">2015-Aug-16 17:09</td></tr>
+<tr><td class="link"><a href="kodi-15.0-Isengard-armeabi-v7a.apk" title="kodi-15.0-Isengard-armeabi-v7a.apk">kodi-15.0-Isengard-armeabi-v7a.apk</a></td><td class="size">57.8 MiB</td><td class="date">2015-Jul-21 20:08</td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+  var loc = document.location.pathname;
+  var segments = loc.split('/');
+  var breadcrumbs = '';
+  var currentPath = '/';
+  for (var i=0; i<segments.length; i++) {
+    if (segments[i] !== '') {
+      currentPath += segments[i] + '/';
+      breadcrumbs += '<a href="' +  currentPath + '">' + window.unescape(segments[i]) + '<\/a>';
+    } else if (segments.length -1 !== i) {
+      currentPath += '';
+      breadcrumbs += '<a href="' + currentPath + '">Root<\/a>';
+    }
+  }
+  document.getElementById('breadcrumbs').innerHTML = breadcrumbs;
+  var colgroupElement = document.getElementsByTagName('colgroup')[0]
+  if (colgroupElement !== undefined)
+    colgroupElement.parentNode.removeChild(colgroupElement)
+  var theadElement = document.getElementsByTagName('thead')[0]
+  if (theadElement !== undefined)
+    theadElement.firstChild.append(document.createElement('th'))
+  var tbodyElement = document.getElementsByTagName('tbody')[0]
+  for (var trElement = tbodyElement.firstChild; trElement !== null; trElement = trElement.nextElementSibling)
+  {
+    var tdMirrorlist = document.createElement('td');
+    if (trElement.childNodes[1].innerHTML !== '-')
+    {
+      var fileName = trElement.childNodes[0].firstChild.href
+      tdMirrorlist.innerHTML = '<a href="' + fileName + '?mirrorlist" style="display: initial" title="Mirrorlist ' + fileName + '"><img src="/css/mirrorlist16.png" /></a>'
+    }
+    trElement.append(tdMirrorlist);
+  }
+</script>
+<script src="/fancyindex/js/history.js"></script>
+</body>
+</html>

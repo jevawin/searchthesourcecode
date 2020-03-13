@@ -1,0 +1,12 @@
+# Borrowed from http://www.edgewall.org/robots.txt
+User-agent: *
+Disallow: /search
+Disallow: /query
+Disallow: /timeline
+Disallow: /log
+Disallow: /browser
+Disallow: /diff
+Crawl-delay: 3
+
+User-agent: discobot
+Disallow: /

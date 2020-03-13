@@ -1,0 +1,18 @@
+Date: Fri, 13 Mar 2020 12:37:13 GMT
+Content-Type: text/html; charset=utf-8
+Cf-Ray: 5735ce129eade5ec-LHR
+Cache-Control: private
+Content-Language: en-US
+Set-Cookie: patreon_device_id=015c78a7-cba3-4e8c-bc2c-2af4d6e64714; Domain=patreon.com; Expires=Thu, 08-Mar-2040 12:37:13 GMT; Max-Age=630720000; Path=/
+Set-Cookie: patreon_locale_code=en-US; Domain=patreon.com; Expires=Thu, 08-Mar-2040 12:37:13 GMT; Max-Age=630720000; Secure; HttpOnly; Path=/
+Strict-Transport-Security: max-age=2592000
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Referrer-Policy: origin,strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: sameorigin
+X-Patreon-Uuid: 32df3e79-6250-4a47-87f5-83e1304b32a2
+X-Xss-Protection: 1; mode=block
+Vary: Accept-Encoding
+Server: cloudflare
+Content-Encoding: gzip

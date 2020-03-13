@@ -1,0 +1,20 @@
+Server: Cowboy
+X-Powered-By: Express
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1
+Referrer-Policy: origin-when-cross-origin
+Content-Type: text/html; charset=utf-8
+Etag: W/"3e816-pIFk2ANNId9UseDnNgIyaA"
+Content-Encoding: gzip
+Via: 1.1 vegur
+Via: 1.1 varnish
+Accept-Ranges: bytes
+Date: Fri, 13 Mar 2020 12:37:13 GMT
+Age: 1843
+X-Served-By: cache-lon4253-LON
+X-Cache: HIT
+X-Cache-Hits: 12
+Vary: x-logged-in, , Accept-Encoding
+Set-Cookie: ugid=10361aee99316573779ee83aee7f52d65280343;domain=.unsplash.com;path=/;expires=Sat, 13 Mar 2021 12:37:13 GMT;SameSite=None;Secure

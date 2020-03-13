@@ -1,0 +1,22 @@
+Date: Fri, 13 Mar 2020 12:37:14 GMT
+Content-Type: text/html; charset=utf-8
+Cf-Ray: 5735ce193f2534b6-LHR
+Cache-Control: public, max-age=0
+Content-Encoding: gzip
+Content-Language: en-us
+Etag: W/"6c2c416c8edc710d6f93111cb4196148"
+Strict-Transport-Security: max-age=259200;
+Vary: Accept-Encoding
+Cf-Cache-Status: EXPIRED
+Cache-Tags: resource:articles#show, pod:pod13
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Protocol: HTTP/1.0
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 5735ce19557434b6-SEA
+X-Runtime: 0.323724
+X-Ua-Compatible: IE=edge
+X-Xss-Protection: 1; mode=block
+X-Zendesk-Origin-Server: help-center-unicorn-6f66f74cbf-xrb5l
+X-Zendesk-User-Id: 
+Server: cloudflare

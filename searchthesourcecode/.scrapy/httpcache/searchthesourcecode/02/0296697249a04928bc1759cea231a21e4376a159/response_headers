@@ -1,0 +1,25 @@
+Date: Fri, 13 Mar 2020 12:37:13 GMT
+Content-Type: text/html; charset=utf-8
+X-Ua-Compatible: IE=edge
+Cache-Tags: resource:articles#show, pod:pod13
+Content-Language: en-us
+X-Xss-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Location: https://support.cloudflare.com/hc/en-us/articles/200172906-What-should-I-do-if-I-m-expecting-a-surge-or-spike-in-traffic-
+Strict-Transport-Security: max-age=259200;
+Set-Cookie: _zendesk_shared_session=-SEJudWRwNHBkN3lRQUxXalJ5aVRvZlAybzJXOCtFV2xNNmMzS2hreGl0MkJqUWV5bzl0NkwwMlMvRXZuQTIyQzlKbytUdCs5YUpwb3BJT0V1eWIrQWJLbjlIZXYvaDVEN05MaFc0SzUwQ2k5RGo3Uit6eXZsQ3FGV3pLcmZhSnU1aG13TGtReTNZMFhtN2xzOXJncTlFRWhnZEU1VGZtelVPN2tLMktRQldNPS0tRGJML0pWeEoyMWpINm1CQTlKaUkwZz09--5d6cf28ec8e6daa35a891b83eb43d8de6f96f8e4; path=/; secure; HttpOnly; SameSite=None
+Set-Cookie: _zendesk_authenticated=; path=/; expires=Thu, 01 Jan 1970 00:00:00 -0000; secure; HttpOnly; SameSite=None
+Set-Cookie: _help_center_session=am9iMjU5L2pBWkxjQ0laWnVpSER0VFQrTWc5UGdHVGFxYkU0WVY1Q2RNN3VMVnZSdnEvRWplNWNTL2JrQnlHaEtpUmV4amZvRVFmZ2xweWlmYzZaQmc9PS0tZDE5bzA3NFpIM2E3a3hmY21ETExuQT09--193bee28b01aa6876c8c736b5934f01a472d0158; path=/; secure; HttpOnly; SameSite=None
+P3P: CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+X-Zendesk-User-Id: 
+Cache-Control: no-cache
+X-Zendesk-Origin-Server: help-center-unicorn-6f66f74cbf-gkrxb
+X-Request-Id: 5735ce16adda34b6-SEA
+X-Runtime: 0.146790
+Protocol: HTTP/1.0
+X-Content-Type-Options: nosniff
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 5735ce16adda34b6-LHR

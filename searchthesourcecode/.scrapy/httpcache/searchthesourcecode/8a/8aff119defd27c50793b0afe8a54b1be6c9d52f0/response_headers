@@ -1,0 +1,16 @@
+Accept-Ranges: bytes
+Age: 42803
+Cache-Control: max-age=0
+Content-Encoding: gzip
+Content-Security-Policy: default-src 'self' ; connect-src 'self' https://api.twitter.com https://syndication.twitter.com https://www.google-analytics.com; font-src 'self' https://*.twimg.com https://*.twitter.com data:; frame-src 'self' https://twitter.com https://*.twitter.com; img-src 'self' https://*.twimg.com https://*.twitter.com https://www.google-analytics.com https://cdn.cms-twdigitalassets.com https://twitter.com/i/jot data:; media-src 'self' https://*.twimg.com https://*.twitter.com https://cdn.cms-twdigitalassets.com; object-src 'self' ; script-src 'self' 'sha256-ppW1Vv+qSVcs+/pIj1ZXvMiCLoyHyCdRqtDMeK9fQ9w=' https://*.twitter.com https://static.ads-twitter.com; style-src 'self' 'unsafe-inline' https://*.twimg.com https://*.twitter.com https://cdn.cms-twdigitalassets.com; report-uri https://twitter.com/i/csp_report; frame-ancestors 'self'
+Content-Type: text/html
+Date: Fri, 13 Mar 2020 12:37:13 GMT
+Expires: Fri, 13 Mar 2020 12:37:13 GMT
+Server: tsa_f
+Set-Cookie: cms-csp-nonce=d4bf3542bb5a9afc1ffbfdfbc56ea90; Max-Age=15; Expires=Fri, 13 Mar 2020 12:37:28 GMT; Path=/; Secure
+Strict-Transport-Security: max-age=631138519
+Vary: Cookie
+X-Connection-Hash: 85f1ae18a1eeded0a2cbff9605c50bc3
+X-Frame-Options: SAMEORIGIN
+X-Response-Time: 123
+X-Xss-Protection: 0

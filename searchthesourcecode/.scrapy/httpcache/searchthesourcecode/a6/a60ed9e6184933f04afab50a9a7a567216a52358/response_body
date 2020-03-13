@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /terms
+Disallow: /privacy
+Disallow: /password

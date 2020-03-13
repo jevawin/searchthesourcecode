@@ -1,0 +1,24 @@
+Server: nginx
+Date: Fri, 13 Mar 2020 12:37:16 GMT
+Content-Type: text/plain
+Last-Modified: Thu, 12 Mar 2020 21:11:53 GMT
+Etag: W/"5e6aa599-cc93"
+Expires: Fri, 20 Mar 2020 12:37:16 GMT
+Cache-Control: max-age=604800
+Cache-Control: private
+Content-Encoding: gzip
+Expect-Ct: max-age=86400, report-uri="https://www.linkedin.com/platform-telemetry/ct"
+Strict-Transport-Security: max-age=2592000
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+X-Frame-Options: sameorigin
+Content-Security-Policy: default-src *; connect-src 'self' https://media-src.linkedin.com/media/ www.linkedin.com s.c.lnkd.licdn.com m.c.lnkd.licdn.com s.c.exp1.licdn.com s.c.exp2.licdn.com m.c.exp1.licdn.com m.c.exp2.licdn.com wss://*.linkedin.com dms.licdn.com https://dpm.demdex.net/id https://lnkd.demdex.net/event blob: static.licdn.com static-exp1.licdn.com static-exp2.licdn.com static-exp3.licdn.com media.licdn.com media-exp1.licdn.com media-exp2.licdn.com media-exp3.licdn.com; img-src data: blob: *; font-src data: *; style-src 'unsafe-inline' 'self' static-src.linkedin.com *.licdn.com; script-src 'report-sample' 'unsafe-inline' 'unsafe-eval' 'self' spdy.linkedin.com static-src.linkedin.com *.ads.linkedin.com *.licdn.com static.chartbeat.com www.google-analytics.com ssl.google-analytics.com bcvipva02.rightnowtech.com www.bizographics.com sjs.bizographics.com js.bizographics.com d.la4-c1-was.salesforceliveagent.com slideshare.www.linkedin.com https://snap.licdn.com/li.lms-analytics/insight.min.js platform.linkedin.com platform-akam.linkedin.com platform-ecst.linkedin.com platform-azur.linkedin.com; object-src 'none'; media-src blob: *; child-src blob: lnkd-communities: voyager: *; frame-ancestors 'self'; report-uri https://www.linkedin.com/platform-telemetry/csp?f=l
+X-Li-Fabric: prod-lva1
+Set-Cookie: bcookie="v=2&18bf1f6e-9ff1-42c6-8df7-d71ce920fdb4"; domain=.linkedin.com; Path=/; Secure; Expires=Mon, 14-Mar-2022 00:14:48 GMT; SameSite=None
+Set-Cookie: bscookie="v=1&20200313123716d158bf0c-c215-4d8e-854b-b1f3b3d545f1AQELqTNQubZrRzqkH_IrgKHsE0DjWDCH"; domain=.www.linkedin.com; Path=/; Secure; Expires=Mon, 14-Mar-2022 00:14:48 GMT; HttpOnly; SameSite=None
+Set-Cookie: lissc=1; domain=.linkedin.com; Path=/; Secure; Expires=Sat, 13-Mar-2021 12:37:16 GMT; SameSite=None
+X-Li-Pop: prod-tln1
+X-Li-Proto: http/1.1
+Report-To: {"group":"network-errors","max_age":2592000,"endpoints":[{"url":"https://www.linkedin.com/li/rep"}],"include_subdomains":true}
+Nel: {"report_to":"network-errors","max_age":1296000,"success_fraction":0.00066,"failure_fraction":1,"include_subdomains":true}
+X-Li-Uuid: sARNm1Hd+xUgL0005SoAAA==

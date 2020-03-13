@@ -1,0 +1,9 @@
+Date: Fri, 13 Mar 2020 12:37:19 GMT
+Server: Varnish
+X-Varnish: 883607703
+X-Cache: cp3064 int
+X-Cache-Status: int-front
+Server-Timing: cache;desc="int-front"
+Set-Cookie: WMF-Last-Access=13-Mar-2020;Path=/;HttpOnly;secure;Expires=Tue, 14 Apr 2020 12:00:00 GMT
+X-Client-Ip: 89.197.157.66
+Location: https://meta.wikimedia.org/robots.txt

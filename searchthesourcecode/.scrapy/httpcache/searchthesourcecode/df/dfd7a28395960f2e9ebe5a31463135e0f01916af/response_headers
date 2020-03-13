@@ -1,0 +1,19 @@
+Date: Fri, 13 Mar 2020 12:37:14 GMT
+Content-Type: text/html; charset=UTF-8
+P3P: CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+Vary: Accept
+X-Frame-Options: SAMEORIGIN
+Location: https://support.cloudflare.com/hc/en-us/articles/200170566-My-SSL-isn-t-working-Why-not-
+Set-Cookie: _zendesk_shared_session=-bmZMcDlOYytLRmZhSm5YT0JhRmZSRDV5L3RSK2JEOHFlMEpycVZFdHZTRlhkL3lBOVpEcWFSSjhIUzFNSWwyM0RVa0pTbHhYT2FsSFE5dlhDSE5oQ1JqUEpxcHpCcW9pYThEUVpPT2RweUFibWZpNy9MRGZsY2RkUnNablN2UXZTQTVKZlpVcU1Mdll4WVB2UVFPcWN3PT0tLS9vUEVmNHIyeE1VTGVtUTBmTlAxdnc9PQ%3D%3D--bbd80fb73fa653f89d8f0f2970b5be230b208dec; path=/; secure; HttpOnly; SameSite=None
+Set-Cookie: _zendesk_authenticated=; path=/; expires=Thu, 01 Jan 1970 00:00:00 -0000; secure; HttpOnly; SameSite=None
+Set-Cookie: _zendesk_session=BAh7CUkiD3Nlc3Npb25faWQGOgZFVEkiJWZiODBhMDQzMmZmNWJkMWY5MDAzMmNjODUzZTRiNjA3BjsAVEkiDGFjY291bnQGOwBGaQNy0gJJIgpyb3V0ZQY7AEZpA8zpAkkiE3dhcmRlbi5tZXNzYWdlBjsAVHsA--1c49821dcdfc62d85a0e029c19d52fdc5d42c0a0; path=/; secure; HttpOnly; SameSite=None
+Strict-Transport-Security: max-age=259200;
+Cache-Control: no-cache
+X-Zendesk-Origin-Server: classic-app-server-5b6559575f-8lljd
+X-Request-Id: 5735ce190d4f69d5-SEA
+X-Runtime: 0.097407
+X-Content-Type-Options: nosniff
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 5735ce190d4f69d5-LHR

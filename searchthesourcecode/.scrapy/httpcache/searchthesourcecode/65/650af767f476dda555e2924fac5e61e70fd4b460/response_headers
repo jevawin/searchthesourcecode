@@ -1,0 +1,23 @@
+Server: Apple
+Content-Type: text/html;charset=utf-8
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Strict-Transport-Security: max-age=31536000; includeSubdomains
+Strict-Transport-Security: max-age=31536000; includeSubdomains
+X-Xss-Protection: 1; mode=block
+Access-Control-Allow-Headers: origin
+Access-Control-Max-Age: 1
+Etag: a85GQ6GFDtDRs23JD4R010=====--gzip
+Last-Modified: Wed, 11 Mar 2020 16:53:38 GMT
+Ss-Article-Version: 1.7.7
+Content-Language: en-GB
+Content-Encoding: gzip
+Host: support-shd-mdn.corp.apple.com
+Host: support.apple.com
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Frame-Options: SAMEORIGIN
+Vary: Accept-Encoding
+Cache-Control: public, max-age=15470
+Cache-Control: no-siteapp
+Date: Fri, 13 Mar 2020 12:36:26 GMT
+X-Cache: TCP_HIT from a95-101-137-68.deploy.akamaitechnologies.com (AkamaiGHost/9.9.2.3-28842850) (A)

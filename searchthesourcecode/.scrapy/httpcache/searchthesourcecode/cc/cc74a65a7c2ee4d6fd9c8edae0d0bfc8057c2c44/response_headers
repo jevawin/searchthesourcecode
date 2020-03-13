@@ -1,0 +1,11 @@
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Type: text/plain
+Date: Fri, 13 Mar 2020 12:37:15 GMT
+Expires: Fri, 13 Mar 2020 12:37:15 GMT
+Cache-Control: public, max-age=0
+Last-Modified: Fri, 14 Feb 2020 22:45:00 GMT
+X-Content-Type-Options: nosniff
+Server: sffe
+X-Xss-Protection: 0
+Alt-Svc: quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000

@@ -1,0 +1,14 @@
+Date: Fri, 13 Mar 2020 12:37:27 GMT
+Content-Type: text/html; charset=UTF-8
+Cache-Control: max-age=1000
+Cache-Control: max-age=300
+Link: <https://www.davejmoz.com/wp-json/>; rel="https://api.w.org/"
+Expires: Fri, 13 Mar 2020 12:42:25 GMT
+Vary: Accept-Encoding,User-Agent
+Host-Header: d3AuYmx1ZWhvc3QuY29t
+X-Endurance-Cache-Level: 2
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 5735ce60eb42b79f-CDG
+Content-Encoding: gzip

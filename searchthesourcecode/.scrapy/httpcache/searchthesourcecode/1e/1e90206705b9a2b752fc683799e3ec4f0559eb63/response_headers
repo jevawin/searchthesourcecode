@@ -1,0 +1,26 @@
+Server: Apple
+X-Xss-Protection: 1; mode=block
+X-Xss-Protection: 1; mode=block
+X-Frame-Options: DENY
+X-Frame-Options: DENY
+Content-Security-Policy: frame-ancestors 'none'
+Content-Security-Policy: frame-ancestors 'none';
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+Location: https://www.apple.com/uk/shop/go/help/sales_refunds
+Etag: "d41d8cd98f00b204e9800998ecf8427e"
+Last-Modified: Fri, 13 Mar 2020 12:36:26 GMT
+Pragma: no-cache
+Content-Encoding: gzip
+Content-Language: en
+X-Request-Id: 884d77c9-403c-464a-92f9-4a13f2f40b88
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Shred: 83b00591fd821fa1a4feef4c66a1879f
+Cache-Control: private, no-cache, no-store, must-revalidate, proxy-revalidate, post-check=0, pre-check=0
+Expires: Fri, 13 Mar 2020 12:36:26 GMT
+Date: Fri, 13 Mar 2020 12:36:26 GMT
+Vary: Accept-Encoding
+Set-Cookie: dssid2=2bf8d953-f3d4-4161-a97b-becf1a38b324; Path=/; Domain=apple.com; Expires=Mon, 11-Mar-2030 12:36:26 GMT; Max-Age=315360000; Secure; HttpOnly
+Set-Cookie: dssf=1; Path=/; Domain=apple.com; Expires=Mon, 11-Mar-2030 12:36:26 GMT; Max-Age=315360000; Secure; HttpOnly
+Set-Cookie: as_pcts=7kdTfAw-_mcrN1sL09R7e49h:Fn9p+DaRTvswHHmh35m7lKSl_FP:9L0:C; Path=/; Domain=apple.com; Secure; HttpOnly
+Set-Cookie: as_dc=ucp1; Domain=apple.com; Expires=Fri, 13-Mar-2020 13:06:26 GMT; Path=/; Secure

@@ -1,0 +1,9 @@
+Date: Fri, 13 Mar 2020 12:37:13 GMT
+Content-Type: text/html
+Location: https://www.cloudflare.com/privacypolicy/
+Cf-Ray: 5735ce17d89cf407-LHR
+Vary: Accept-Encoding
+Cf-Cache-Status: EXPIRED
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Alt-Svc: h3-27=":443"; ma=86400, h3-25=":443"; ma=86400, h3-24=":443"; ma=86400, h3-23=":443"; ma=86400

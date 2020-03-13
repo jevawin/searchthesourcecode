@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /Special%3ARecentChanges
+Disallow: /Special:RecentChanges
+Disallow: /index.php

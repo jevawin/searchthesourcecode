@@ -1,0 +1,14 @@
+Date: Fri, 13 Mar 2020 12:36:25 GMT
+Content-Type: text/html
+Location: https://www.cloudflare.com/login/
+Cf-Ray: 5735ccee38fece57-LHR
+Age: 43
+Strict-Transport-Security: max-age=31536000
+Vary: Accept-Encoding
+Cf-Cache-Status: HIT
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+Server: cloudflare
+Alt-Svc: h3-27=":443"; ma=86400, h3-25=":443"; ma=86400, h3-24=":443"; ma=86400, h3-23=":443"; ma=86400

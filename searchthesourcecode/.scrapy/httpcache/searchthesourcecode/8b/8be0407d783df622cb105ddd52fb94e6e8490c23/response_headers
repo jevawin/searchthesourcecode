@@ -1,0 +1,11 @@
+Server: nginx
+Date: Fri, 13 Mar 2020 12:36:26 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=360
+Link: <https://wordpress.org/plugins/wp-json/>; rel="https://api.w.org/"
+Link: <https://wordpress.org/plugins/?p=29559>; rel=shortlink
+X-Olaf: ⛄
+X-Frame-Options: SAMEORIGIN
+X-Nc: MISS ord 1
+Content-Encoding: gzip

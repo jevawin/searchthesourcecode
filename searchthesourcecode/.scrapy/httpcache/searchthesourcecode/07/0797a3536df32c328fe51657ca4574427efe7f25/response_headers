@@ -1,0 +1,15 @@
+Cache-Control: public, max-age=3600
+Content-Type: text/plain
+Date: Fri, 13 Mar 2020 12:37:12 GMT
+Display: staticcontent_sol
+Etag: W/"5e1dfc58-a1-gzip"
+Last-Modified: Fri, 13 Mar 2020 08:59:29 GMT
+Response: 200
+Server: nginx/1.16.0
+Strict-Transport-Security: max-age=31536000
+Vary: Accept-Encoding,User-Agent,Origin,X-APP-JSON
+X-Ezoic-Cdn: Hit ds;mm;0754ee13b46c736ad376d311d0e76420;2-123168-3;5c2fff0a-ffd7-40f6-60ff-3eb27c42a3bc
+X-Middleton-Display: staticcontent_sol
+X-Middleton-Response: 200
+X-Presslabs-Stats: HIT; desktop
+X-Request-Id: 7cb0da1346c1369abde23aa47f81534b

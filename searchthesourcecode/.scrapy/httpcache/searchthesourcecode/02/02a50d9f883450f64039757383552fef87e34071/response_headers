@@ -1,0 +1,13 @@
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Fri, 13 Mar 2020 12:37:17 GMT
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Content-Security-Policy: script-src 'report-sample' 'nonce-ccFr7qnhdE56h+zRKW0Y5g' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/IdentityPoliciesUi/cspreport;worker-src 'self'
+Content-Encoding: gzip
+Server: ESF
+X-Xss-Protection: 0
+X-Content-Type-Options: nosniff
+Set-Cookie: NID=200=aBgf5fz4Leno9BYv_MMOTnkFrSqDK1A7qkJMgqFR4xmKNuDvujpmUxUBVhG7AKe0pereTIaVd2PkUbArdcHpN3x28bxwbjsNN8bE27l-w-IRO9cFV_mXoP3Kvy-ozgItq4bgP4P2el7QKy7hb1ros8ojexrVLzGVIv93Hb9xWQc; expires=Sat, 12-Sep-2020 12:37:17 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000

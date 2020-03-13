@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /apt/
+Disallow: /build-deps/
+Allow: /

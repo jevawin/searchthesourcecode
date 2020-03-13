@@ -1,0 +1,19 @@
+Date: Fri, 13 Mar 2020 12:36:26 GMT
+Content-Type: text/plain; charset=utf-8
+Set-Cookie: __cfduid=d5c91e9b0d890f1bfbcf62edd4326d26a1584102986; expires=Sun, 12-Apr-20 12:36:26 GMT; path=/; domain=.devhints.io; HttpOnly; SameSite=Lax; Secure
+Last-Modified: Sun, 23 Feb 2020 09:38:30 GMT
+Etag: "5e524816-18"
+Access-Control-Allow-Origin: *
+Expires: Thu, 12 Mar 2020 17:34:01 GMT
+Cache-Control: max-age=10800
+X-Proxy-Cache: MISS
+X-Github-Request-Id: 9F44:1CE3:2541F0:2F75CE:5E526C27
+Cf-Cache-Status: HIT
+Age: 69145
+Accept-Ranges: bytes
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=2592000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+Server: cloudflare
+Cf-Ray: 5735ccf3c960e600-LHR

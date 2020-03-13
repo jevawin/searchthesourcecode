@@ -1,0 +1,2612 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>データベース構造 - WordPress Codex 日本語版</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"データベース構造","wgTitle":"データベース構造","wgCurRevisionId":13044,"wgRevisionId":13044,"wgArticleId":296,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["初心者向けトピック","上級トピック","WordPress の開発","データベース","ネットワーク","wp2.1","wp2.3","wp2.5","wp2.6","wp2.7","wp2.8","wp2.9","wp3.0","wp3.4"],"wgBreakFrames":!1,"wgPageContentLanguage":"ja","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"ja","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgMonthNamesShort":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRelevantPageName":"データベース構造",
+"wgRelevantArticleId":296,"wgIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"データベース概要","wgInternalRedirectTargetUrl":"/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0"});mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"ja"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.legacy.wikibits","skins.vector.js"]);
+} );</script>
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=ja&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="/wiki/load.php?debug=false&amp;lang=ja&amp;modules=site&amp;only=styles&amp;skin=vector" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}</style>
+<script async="" src="/wiki/load.php?debug=false&amp;lang=ja&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.26.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="WordPress Codex 日本語版 (ja)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://wpdocs.osdn.jp/wiki/api.php?action=rsd" />
+<link rel="copyright" href="/Codex:%E8%91%97%E4%BD%9C%E6%A8%A9" />
+<link rel="alternate" type="application/atom+xml" title="WordPress Codex 日本語版のAtomフィード" href="/wiki/index.php?title=%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0&amp;feed=atom" />
+<link rel="canonical" href="https://wpdocs.osdn.jp/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/Vector/csshover.min.htc")}</style><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-データベース構造 skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><div id="localNotice" lang="ja" dir="ltr"><div style="text-align: left;">
+<ul><li> <b><span style="font-weight: bold; color: #CC2200">赤色のリンク</span>は、まだ日本語Codexに存在しないページ・画像</b>です。英語版と併せてご覧ください。（<a href="/Codex:WordPress_Codex_%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6#.E3.82.B5.E3.82.A4.E3.83.88.E3.81.AE.E8.A6.8B.E6.96.B9.E3.83.BB.E9.96.B2.E8.A6.A7.E4.B8.8A.E3.81.AE.E6.B3.A8.E6.84.8F" title="Codex:WordPress Codex 日本語版について">詳細</a>）</li></ul>
+</div>
+<p style="text-align: center;">【<a href="/Codex:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="Codex:コミュニティ・ポータル">このWikiはいつでも誰でも編集できます</a>】</p>
+</div></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="ja">データベース構造</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">提供: WordPress Codex 日本語版</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">（<a href="/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;redirect=no" title="データベース概要">データベース概要</a>から転送）</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					移動先:					<a href="#mw-head">案内</a>、					<a href="#p-search">検索</a>
+				</div>
+				<div id="mw-content-text" lang="ja" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>目次</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9.E9.96.A2.E9.80.A3.E5.9B.B3"><span class="tocnumber">1</span> <span class="toctext">データベース関連図</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB.E4.B8.80.E8.A6.A7"><span class="tocnumber">2</span> <span class="toctext">テーブル一覧</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB.E8.A9.B3.E7.B4.B0"><span class="tocnumber">3</span> <span class="toctext">テーブル詳細</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_commentmeta"><span class="tocnumber">3.1</span> <span class="toctext">テーブル: wp_commentmeta</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9"><span class="tocnumber">3.1.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_comments"><span class="tocnumber">3.2</span> <span class="toctext">テーブル: wp_comments</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_2"><span class="tocnumber">3.2.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_links"><span class="tocnumber">3.3</span> <span class="toctext">テーブル: wp_links</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_3"><span class="tocnumber">3.3.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_options"><span class="tocnumber">3.4</span> <span class="toctext">テーブル: wp_options</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_4"><span class="tocnumber">3.4.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_postmeta"><span class="tocnumber">3.5</span> <span class="toctext">テーブル: wp_postmeta</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_5"><span class="tocnumber">3.5.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_posts"><span class="tocnumber">3.6</span> <span class="toctext">テーブル: wp_posts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_6"><span class="tocnumber">3.6.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_terms"><span class="tocnumber">3.7</span> <span class="toctext">テーブル: wp_terms</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_7"><span class="tocnumber">3.7.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_term_relationships"><span class="tocnumber">3.8</span> <span class="toctext">テーブル: wp_term_relationships</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_8"><span class="tocnumber">3.8.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_term_taxonomy"><span class="tocnumber">3.9</span> <span class="toctext">テーブル: wp_term_taxonomy</span></a>
+<ul>
+<li class="toclevel-3 tocsection-21"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_9"><span class="tocnumber">3.9.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_usermeta"><span class="tocnumber">3.10</span> <span class="toctext">テーブル: wp_usermeta</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_10"><span class="tocnumber">3.10.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_users"><span class="tocnumber">3.11</span> <span class="toctext">テーブル: wp_users</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_11"><span class="tocnumber">3.11.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#.E3.83.9E.E3.83.AB.E3.83.81.E3.82.B5.E3.82.A4.E3.83.88.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB.E4.B8.80.E8.A6.A7"><span class="tocnumber">4</span> <span class="toctext">マルチサイトテーブル一覧</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#.E3.83.9E.E3.83.AB.E3.83.81.E3.82.B5.E3.82.A4.E3.83.88.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB.E8.A9.B3.E7.B4.B0"><span class="tocnumber">5</span> <span class="toctext">マルチサイトテーブル詳細</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_blogs"><span class="tocnumber">5.1</span> <span class="toctext">テーブル: wp_blogs</span></a>
+<ul>
+<li class="toclevel-3 tocsection-29"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_12"><span class="tocnumber">5.1.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-30"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_blog_versions"><span class="tocnumber">5.2</span> <span class="toctext">テーブル: wp_blog_versions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-31"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_13"><span class="tocnumber">5.2.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-32"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_registration_log"><span class="tocnumber">5.3</span> <span class="toctext">テーブル: wp_registration_log</span></a>
+<ul>
+<li class="toclevel-3 tocsection-33"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_14"><span class="tocnumber">5.3.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-34"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_signups"><span class="tocnumber">5.4</span> <span class="toctext">テーブル: wp_signups</span></a>
+<ul>
+<li class="toclevel-3 tocsection-35"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_15"><span class="tocnumber">5.4.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-36"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_site"><span class="tocnumber">5.5</span> <span class="toctext">テーブル: wp_site</span></a>
+<ul>
+<li class="toclevel-3 tocsection-37"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_16"><span class="tocnumber">5.5.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-38"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_sitemeta"><span class="tocnumber">5.6</span> <span class="toctext">テーブル: wp_sitemeta</span></a>
+<ul>
+<li class="toclevel-3 tocsection-39"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_17"><span class="tocnumber">5.6.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-40"><a href="#.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_users_2"><span class="tocnumber">5.7</span> <span class="toctext">テーブル: wp_users</span></a>
+<ul>
+<li class="toclevel-3 tocsection-41"><a href="#.E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_18"><span class="tocnumber">5.7.1</span> <span class="toctext">インデックス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-42"><a href="#.E3.82.B5.E3.82.A4.E3.83.88.E5.9B.BA.E6.9C.89.E3.81.AE.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB"><span class="tocnumber">5.8</span> <span class="toctext">サイト固有のテーブル</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-43"><a href="#.E3.82.BD.E3.83.BC.E3.82.B9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB"><span class="tocnumber">6</span> <span class="toctext">ソースファイル</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="#.E8.B3.87.E6.96.99"><span class="tocnumber">7</span> <span class="toctext">資料</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="#.E6.97.A7.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.AE.E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9.E6.A6.82.E8.A6.81"><span class="tocnumber">8</span> <span class="toctext">旧バージョンのデータベース概要</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="#.E5.A4.89.E6.9B.B4.E5.B1.A5.E6.AD.B4"><span class="tocnumber">9</span> <span class="toctext">変更履歴</span></a></li>
+</ul>
+</div>
+
+<p>以下は、<a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp3.4" title="カテゴリ:wp3.4">WordPress バージョン <b>3.4</b></a> の標準的なインストールで作成されるデータベース・テーブルの概要と説明です。現在、WordPress バージョン 3.4 が対応しているデータベースは、<a href="/%E7%94%A8%E8%AA%9E%E9%9B%86#MySQL" title="用語集">MySQL</a> バージョン <b>5.0.15 以上</b>のみです。
+</p><p>バージョン 1.5 以降の過去のデータベース概要については<a href="http://codex.wordpress.org/Database_Description" class="extiw" title="en:Database Description">英語版ページ</a>にあるリンクおよびこのページの<a href="#.E6.97.A7.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.AE.E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9.E6.A6.82.E8.A6.81">旧バージョンのデータベース概要</a>セクションをご覧ください。
+</p><p>WordPress は自動的にこのデータベースと連動しているため、エンドユーザーはその構造を気にする必要はありません。しかし<a href="/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AE%E4%BD%9C%E6%88%90" title="プラグインの作成">プラグインを作成</a>していると、WordPress がどのようにデータやその連携情報を格納しているかについて知りたいと思うかもしれません。既存の <a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:API" title="カテゴリ:API">WordPress API</a> を使って必要なデータにアクセスしようとしたことがすでにあり、データベースには直接アクセスできないことがわかっている方に対し、WordPress ではこの処理が簡単にできるよう <a href="/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/wpdb_Class" title="関数リファレンス/wpdb Class">wpdb クラス</a>を用意しています。
+</p><p>注：
+</p>
+<ul><li> テーブル名の接頭辞（<code>wp_</code>）は、WordPress インストール時の設定によります。</li>
+<li> プラグインやテーマによって、設定データの追加、既存テーブルへのフィールド追加、新規テーブル作成がされることもあります。</li>
+<li> <a href="#.E6.97.A7.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.AE.E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9.E6.A6.82.E8.A6.81">旧バージョンのデータベース概要</a></li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id=".E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9.E9.96.A2.E9.80.A3.E5.9B.B3">データベース関連図<span id="Database_Diagram"></span></span></h2>
+<p>下図は、WordPress データベースの概要および標準インストール時に作成されるテーブル間の関係を視覚的に表したものです。また、<a href="#Table_Overview">テーブル一覧</a>以降では、テーブルおよびカラムの詳細を掲載しています。
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:802px;"><a href="/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:WP3.9.4-ERD.png" class="image"><img alt="" src="/wiki/images/thumb/WP3.9.4-ERD.png/800px-WP3.9.4-ERD.png" width="800" height="1211" class="thumbimage" srcset="/wiki/images/WP3.9.4-ERD.png 1.5x, /wiki/images/WP3.9.4-ERD.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:WP3.9.4-ERD.png" class="internal" title="拡大"></a></div>WP 3.9.4 データベース関連図（ER図）</div></div></div></div>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:652px;"><a href="/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:WP3.8-ERD.png" class="image"><img alt="" src="/wiki/images/thumb/WP3.8-ERD.png/650px-WP3.8-ERD.png" width="650" height="907" class="thumbimage" srcset="/wiki/images/WP3.8-ERD.png 1.5x, /wiki/images/WP3.8-ERD.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:WP3.8-ERD.png" class="internal" title="拡大"></a></div>WP3.8 データベース関連図（ER図）</div></div></div></div>
+<p>標準インストールでテーブル間の整合性は強制されない事に注意してください（例: 投稿とコメント）。もし WordPress データベースを操作するプラグインやその他の拡張機能を作成する場合は、ハウスキーピング処理をコードに含め、孤立したレコードがテーブルに残らないようにしましょう。この一例として、外部キーが削除された場合、一連の SQL コマンドを使って他のテーブルのレコードを削除するといったことが挙げられます。また、このような操作を行う前には、ユーザーにバックアップを取るよう促すことも忘れないでください。
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB.E4.B8.80.E8.A6.A7">テーブル一覧<span id="Table_Overview"></span></span></h2>
+<p>WordPress の標準インストールで作成される全テーブルの一覧です。各テーブルが持つ具体的な情報は<a href="#Table_Details">次節</a>をご覧ください。
+</p>
+<table class="widefat">
+
+<tr valign="top" style="background:#464646; color:#d7d7d7;">
+<th colspan="3"> <b>WordPress 3.8 Tables (11)</b>
+</th></tr>
+<tr valign="top" style="background:#464646; color:#d7d7d7;">
+<th width="6%"> テーブル名 </th>
+<th width="45%"> 説明 </th>
+<th> 関連インターフェース画面
+</th></tr>
+<tr valign="top">
+<th>  <a href="#Table:_wp_commentmeta">wp_commentmeta</a>
+</th>
+<td> 各<b>コメント</b>には<b>メタデータ</b>と呼ばれる情報があり、<tt>wp_commentmeta</tt>に格納されている。</td>
+<td>
+<ul><li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Comments" title="管理画面">コメント</a> &gt; <a href="/Comments_Comments_SubPanel" title="Comments Comments SubPanel" class="mw-redirect">コメント</a></li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_comments">wp_comments</a>
+</th>
+<td> WordPress への<b>コメント</b>・トラックバック・ピンバックデータを格納 </td>
+<td>
+<ul><li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Comments" title="管理画面">コメント</a> &gt; <a href="/Comments_Comments_SubPanel" title="Comments Comments SubPanel" class="mw-redirect">コメント</a></li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_links">wp_links</a>
+</th>
+<td> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Links" title="管理画面">リンク作成</a>で入力された<b>リンク</b>情報を格納。<i>(この機能は非推奨になりましたが、<a rel="nofollow" class="external text" href="http://wordpress.org/extend/plugins/link-manager/">Links Manager</a> プラグインで有効化できます)</i> </td>
+<td>
+<ul><li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Links" title="管理画面">リンク</a> &gt; <a href="/Links_Add_New_SubPanel" title="Links Add New SubPanel" class="mw-redirect">新規追加</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Links" title="管理画面">リンク</a> &gt; <a href="/Links_Links_SubPanel" title="Links Links SubPanel" class="mw-redirect">リンク</a></li></ul>
+</td></tr>
+<tr valign="top">
+<th>  <a href="#Table:_wp_options">wp_options</a>
+</th>
+<td> <b>管理 &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Settings" title="管理画面">設定</a></b>で設定された<b>オプション設定</b>情報を格納（<a href="/Option_Reference" title="Option Reference" class="mw-redirect">オプション設定リファレンス</a>参照）。プラグインの設定情報が格納されることも多い。
+</td>
+<td>
+<ul><li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Settings" title="管理画面">設定</a> &gt; <a href="/Settings_General_SubPanel" title="Settings General SubPanel" class="mw-redirect">一般設定</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Settings" title="管理画面">設定</a> &gt; <a href="/Settings_Writing_SubPanel" title="Settings Writing SubPanel" class="mw-redirect">投稿設定</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Settings" title="管理画面">設定</a> &gt; <a href="/Settings_Reading_SubPanel" title="Settings Reading SubPanel" class="mw-redirect">表示設定</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Settings" title="管理画面">設定</a> &gt; <a href="/Settings_Discussion_SubPanel" title="Settings Discussion SubPanel" class="mw-redirect">ディスカッション設定</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Settings" title="管理画面">設定</a> &gt; <a href="/Settings_Media_SubPanel" title="Settings Media SubPanel" class="mw-redirect">メディア設定</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Settings" title="管理画面">設定</a> &gt; <a href="/Settings_Privacy_SubPanel" title="Settings Privacy SubPanel" class="mw-redirect">プライバシー設定</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Settings" title="管理画面">設定</a> &gt; <a href="/Settings_Permalinks_SubPanel" title="Settings Permalinks SubPanel" class="mw-redirect">パーマリンク設定</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Appearance" title="管理画面">外観</a> &gt; <a href="/Appearance_Widgets_SubPanel" title="Appearance Widgets SubPanel" class="mw-redirect">ウィジェット</a></li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_postmeta">wp_postmeta</a>
+</th>
+<td> <b>メタデータ</b>という各投稿記事特有の情報を格納。<a href="/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9" title="カスタムフィールドの使い方">カスタムフィールド</a>として使用するほか、各投稿に情報や設定を付加するようなプラグインが、その情報を当テーブルに追加することがある。 </td>
+<td>
+<ul><li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Posts" title="管理画面">投稿</a> &gt; <a href="/Posts_Add_New_SubPanel" title="Posts Add New SubPanel" class="mw-redirect">新規追加</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Pages" title="管理画面">ページ</a> &gt; <a href="/Pages_Add_New_SubPanel" title="Pages Add New SubPanel" class="mw-redirect">新規追加</a></li></ul>
+<p>（カスタムフィールド）
+</p>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_posts">wp_posts</a>
+</th>
+<td> WordPress データの核である<a href="/%E7%94%A8%E8%AA%9E%E9%9B%86#Post" title="用語集"><b>投稿記事</b></a>のほか、<a href="/%E7%94%A8%E8%AA%9E%E9%9B%86#Page" title="用語集"><b>ページ</b></a>、ナビゲーションメニューのデータを格納  </td>
+<td>
+<ul><li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Posts" title="管理画面">投稿</a> &gt; <a href="/Posts_Add_New_SubPanel" title="Posts Add New SubPanel" class="mw-redirect">新規追加</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Posts" title="管理画面">投稿</a> &gt; <a href="/Posts_Posts_SubPanel" title="Posts Posts SubPanel" class="mw-redirect">投稿</a> </li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Pages" title="管理画面">ページ</a> &gt; <a href="/Pages_Add_New_SubPanel" title="Pages Add New SubPanel" class="mw-redirect">新規追加</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Pages" title="管理画面">ページ</a> &gt; <a href="/Pages_Pages_SubPanel" title="Pages Pages SubPanel" class="mw-redirect">ページ</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Media" title="管理画面">メディア</a> &gt; <a href="/Media_Add_New_SubPanel" title="Media Add New SubPanel" class="mw-redirect">新規追加</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Appearance" title="管理画面">外観</a> &gt; <a href="/Appearance_Menus_SubPanel" title="Appearance Menus SubPanel" class="mw-redirect">メニュー</a></li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_terms">wp_terms</a>
+</th>
+<td> 投稿およびリンクの分類（カテゴリ・タグ）に使われる<b>語句</b>の基本情報を格納 </td>
+<td rowspan="3">
+<ul><li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Posts" title="管理画面">投稿</a> &gt; <a href="/Posts_Post_Tags_SubPanel" title="Posts Post Tags SubPanel" class="mw-redirect">投稿タグ</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Posts" title="管理画面">投稿</a> &gt; <a href="/Posts_Categories_SubPanel" title="Posts Categories SubPanel" class="mw-redirect">カテゴリー</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Links" title="管理画面">リンク</a> &gt; <a href="/Links_Link_Categories_SubPanel" title="Links Link Categories SubPanel" class="mw-redirect">リンクカテゴリー</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Posts" title="管理画面">投稿</a> &gt; <a href="/Posts_Add_New_SubPanel" title="Posts Add New SubPanel" class="mw-redirect">新規追加</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Posts" title="管理画面">投稿</a> &gt; <a href="/Posts_Posts_SubPanel" title="Posts Posts SubPanel" class="mw-redirect">投稿</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Pages" title="管理画面">ページ</a> &gt; <a href="/Pages_Add_New_SubPanel" title="Pages Add New SubPanel" class="mw-redirect">新規追加</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Pages" title="管理画面">ページ</a> &gt; <a href="/Pages_Pages_SubPanel" title="Pages Pages SubPanel" class="mw-redirect">ページ</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Links" title="管理画面">リンク</a> &gt; <a href="/Links_Links_SubPanel" title="Links Links SubPanel" class="mw-redirect">リンク</a></li>
+<li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Links" title="管理画面">リンク</a> &gt; <a href="/Links_Add_New_SubPanel" title="Links Add New SubPanel" class="mw-redirect">編集</a></li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_term_relationships">wp_term_relationships</a>
+</th>
+<td> オブジェクト（<code>wp_posts</code> テーブルの各<b>投稿記事</b>、<code>wp_links</code> テーブル内の各<b>リンク</b>）と <code>wp_term_taxonomy</code> の（少なくとも 1）<b>カテゴリ・タグとの関連付け</b>情報を格納
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_term_taxonomy">wp_term_taxonomy</a>
+</th>
+<td> 投稿およびリンクの<b>分類上の語句（カテゴリ・タグ）</b>データを格納
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_usermeta">wp_usermeta</a>
+</th>
+<td> 各ユーザ特有の<b>ユーザ・メタデータ</b>を格納 </td>
+<td>
+<ul><li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Users" title="管理画面">ユーザー</a></li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_users">wp_users</a>
+</th>
+<td> 登録<b>ユーザ</b>情報を格納 </td>
+<td>
+<ul><li> <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2" title="管理画面">管理画面</a> &gt; <a href="/%E7%AE%A1%E7%90%86%E7%94%BB%E9%9D%A2#Users" title="管理画面">ユーザー</a></li></ul>
+</td></tr></table>
+<p><br />
+</p>
+<h2><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB.E8.A9.B3.E7.B4.B0">テーブル詳細<span id="Table_Details"></span></span></h2>
+<p>WordPress の標準インストールで作成される各テーブルの項目一覧です。
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_commentmeta">テーブル: wp_commentmeta<span id="Table:_wp_commentmeta"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td>meta_id</td>
+<td>bigint(20)  unsigned</td>
+<td>&#160;</td>
+<td>PRI</td>
+<td>&#160;</td>
+<td>auto_increment </td>
+<td> コメントメタID（登録順に自動採番）
+</td></tr>
+<tr>
+<td>comment_id</td>
+<td>bigint(20)  unsigned</td>
+<td>&#160;</td>
+<td>IND</td>
+<td>0</td>
+<td>&#160;</td>
+<td> コメントID
+</td></tr>
+<tr>
+<td>meta_key</td>
+<td>varchar(255)</td>
+<td>YES</td>
+<td>IND</td>
+<td>NULL</td>
+<td>&#160;
+</td></tr>
+<tr>
+<td>meta_value</td>
+<td>longtext</td>
+<td>YES</td>
+<td>&#160;</td>
+<td>NULL</td>
+<td>&#160;
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td>PRIMARY</td>
+<td>PRIMARY</td>
+<td>meta_id
+</td></tr>
+<tr>
+<td>comment_id</td>
+<td>INDEX</td>
+<td>comment_id
+</td></tr>
+<tr>
+<td>meta_key</td>
+<td>INDEX</td>
+<td>meta_key
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_comments">テーブル: wp_comments<span id="Table:_wp_comments"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td> comment_ID </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI </td>
+<td> &#160;</td>
+<td> auto_increment </td>
+<td> コメントID（投稿順に自動採番）
+</td></tr>
+<tr>
+<td> comment_post_ID </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> IND </td>
+<td> 0 </td>
+<td> &#160; </td>
+<td> コメントが属する投稿ID
+</td></tr>
+<tr>
+<td> comment_author </td>
+<td> tinytext </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> コメント投稿者
+</td></tr>
+<tr>
+<td> comment_author_email </td>
+<td> varchar(100) </td>
+<td> </td>
+<td> IND </td>
+<td> </td>
+<td> </td>
+<td> コメント投稿者の Eメールアドレス
+</td></tr>
+<tr>
+<td> comment_author_url </td>
+<td> varchar(200) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> コメント投稿者のウェブサイトURL
+</td></tr>
+<tr>
+<td> comment_author_IP </td>
+<td> varchar(100) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> コメント投稿者の IPアドレス
+</td></tr>
+<tr>
+<td> comment_date </td>
+<td> datetime </td>
+<td> </td>
+<td> </td>
+<td> 0000-00-00 00:00:00 </td>
+<td> </td>
+<td> コメント投稿日時
+</td></tr>
+<tr>
+<td> comment_date_gmt </td>
+<td> datetime </td>
+<td> </td>
+<td> IND &amp; IND Pt2 </td>
+<td> 0000-00-00 00:00:00 </td>
+<td> </td>
+<td> コメント投稿日時（GMT）
+</td></tr>
+<tr>
+<td> comment_content </td>
+<td> text </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> コメント内容
+</td></tr>
+<tr>
+<td> comment_karma </td>
+<td> int(11) </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> comment_approved </td>
+<td> varchar(20) </td>
+<td> </td>
+<td> IND Pt1 </td>
+<td> 1 </td>
+<td> </td>
+<td> コメントの承認状態
+<ul><li> <code>'0'</code>: 承認待ち</li>
+<li> <code>'1'</code>: 承認済み</li>
+<li> <code>'spam'</code>: スパム</li></ul>
+</td></tr>
+<tr>
+<td> comment_agent </td>
+<td> varchar(255) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> コメント投稿者のユーザエージェント
+</td></tr>
+<tr>
+<td> comment_type </td>
+<td> varchar(20) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> コメントの種類
+<ul><li> <code>'trackback'</code>: トラックバック</li>
+<li> <code>'pingback'</code>: ピンバック</li>
+<li> 通常コメントは値なし</li></ul>
+</td></tr>
+<tr>
+<td> comment_parent </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> IND </td>
+<td> 0 </td>
+<td> &#160;
+</td></tr>
+<tr>
+<td> user_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> &#160; </td>
+<td> コメント投稿者が登録ユーザであるとき、そのユーザID
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_2">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY </td>
+<td> PRIMARY </td>
+<td> comment_ID
+</td></tr>
+<tr>
+<td> comment_approved </td>
+<td> INDEX </td>
+<td> comment_approved
+</td></tr>
+<tr>
+<td> comment_post_ID </td>
+<td> INDEX </td>
+<td> comment_post_ID
+</td></tr>
+<tr>
+<td> comment_approved_date_gmt </td>
+<td> INDEX </td>
+<td> comment_approved<br />comment_date_gmt
+</td></tr>
+<tr>
+<td> comment_date_gmt </td>
+<td> INDEX </td>
+<td> comment_date_gmt
+</td></tr>
+<tr>
+<td> comment_parent  </td>
+<td>INDEX </td>
+<td> comment_parent
+</td></tr>
+<tr>
+<td> comment_author_email</td>
+<td>INDEX</td>
+<td>comment_author_email
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_links">テーブル: wp_links<span id="Table:_wp_links"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td> link_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI </td>
+<td> &#160; </td>
+<td> auto_increment </td>
+<td> リンクID（登録順に自動採番）
+</td></tr>
+<tr>
+<td> link_url </td>
+<td> varchar(255) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> リンク URL
+</td></tr>
+<tr>
+<td> link_name </td>
+<td> varchar(255) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> リンク名
+</td></tr>
+<tr>
+<td> link_image </td>
+<td> varchar(255) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> リンク画像の URI
+</td></tr>
+<tr>
+<td> link_target </td>
+<td> varchar(25) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> リンクターゲット
+</td></tr>
+<tr>
+<td> link_description </td>
+<td> varchar(255) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> 説明
+</td></tr>
+<tr>
+<td> link_visible </td>
+<td> varchar(20) </td>
+<td> </td>
+<td> IND </td>
+<td> Y </td>
+<td> </td>
+<td>
+<ul><li> <code>'Y'</code>: 表示する</li>
+<li> <code>'N'</code>: 表示しない</li></ul>
+</td></tr>
+<tr>
+<td> link_owner </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> </td>
+<td> 1 </td>
+<td>
+</td></tr>
+<tr>
+<td> link_rating </td>
+<td> int(11) </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td> 評価
+</td></tr>
+<tr>
+<td> link_updated </td>
+<td> datetime </td>
+<td> </td>
+<td> </td>
+<td> 0000-00-00 00:00:00 </td>
+<td>
+</td></tr>
+<tr>
+<td> link_rel </td>
+<td> varchar(255) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> link_notes </td>
+<td> mediumtext </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> メモ
+</td></tr>
+<tr>
+<td> link_rss </td>
+<td> varchar(255) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> リンクのフィード URI
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_3">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td>PRIMARY</td>
+<td>PRIMARY</td>
+<td>link_id
+</td></tr>
+<tr>
+<td>link_visible</td>
+<td>INDEX</td>
+<td>link_visible
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_options">テーブル: wp_options<span id="Table:_wp_options"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考
+</th></tr>
+<tr>
+<td>option_id</td>
+<td>bigint(20)  unsigned</td>
+<td>&#160;</td>
+<td>PRI</td>
+<td>&#160;</td>
+<td>auto_increment
+</td></tr>
+<tr>
+<td>option_name</td>
+<td>varchar(64)</td>
+<td>&#160;</td>
+<td>UNI</td>
+<td>&#160;</td>
+<td>&#160;
+</td></tr>
+<tr>
+<td>option_value</td>
+<td>longtext</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>
+</td></tr>
+<tr>
+<td>autoload</td>
+<td>varchar(20)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>yes</td>
+<td>&#160;
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_4">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY</td>
+<td>PRIMARY</td>
+<td>option_id
+</td></tr>
+<tr>
+<td> option_name </td>
+<td> UNIQUE </td>
+<td> option_name
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_postmeta">テーブル: wp_postmeta<span id="Table:_wp_postmeta"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td> meta_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI </td>
+<td> &#160; </td>
+<td> auto_increment </td>
+<td> メタID（一意）（登録順に自動採番）
+</td></tr>
+<tr>
+<td> post_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> IND </td>
+<td> 0 </td>
+<td> &#160; </td>
+<td> 投稿ID
+</td></tr>
+<tr>
+<td> meta_key </td>
+<td> varchar(255) </td>
+<td> YES </td>
+<td> IND </td>
+<td> NULL </td>
+<td> </td>
+<td> <a href="/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9" title="カスタムフィールドの使い方">カスタムフィールド</a>のキー名
+</td></tr>
+<tr>
+<td> meta_value </td>
+<td> longtext </td>
+<td> YES </td>
+<td> </td>
+<td> NULL </td>
+<td> </td>
+<td> <a href="/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9" title="カスタムフィールドの使い方">カスタムフィールド</a>の値
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_5">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY </td>
+<td> PRIMARY </td>
+<td> meta_id
+</td></tr>
+<tr>
+<td> post_id </td>
+<td> INDEX </td>
+<td> post_id
+</td></tr>
+<tr>
+<td> meta_key </td>
+<td> INDEX </td>
+<td> meta_key
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_posts">テーブル: wp_posts<span id="Table:_wp_posts"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td>ID </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI &amp; IND Pt4 </td>
+<td>  </td>
+<td> auto_increment </td>
+<td> 投稿ID（保存順に自動採番）
+</td></tr>
+<tr>
+<td> post_author </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> IND </td>
+<td> 0 </td>
+<td> &#160; </td>
+<td> 投稿者のユーザID
+</td></tr>
+<tr>
+<td> post_date </td>
+<td> datetime </td>
+<td> </td>
+<td> IND Pt3 </td>
+<td> 0000-00-00 00:00:00 </td>
+<td> </td>
+<td> 投稿日時
+</td></tr>
+<tr>
+<td> post_date_gmt </td>
+<td> datetime </td>
+<td> </td>
+<td> </td>
+<td> 0000-00-00 00:00:00 </td>
+<td> </td>
+<td> 投稿日時（GMT）
+</td></tr>
+<tr>
+<td> post_content </td>
+<td> longtext </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> 本文
+</td></tr>
+<tr>
+<td> post_title </td>
+<td> text </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> タイトル
+</td></tr>
+<tr>
+<td> post_excerpt </td>
+<td> text </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> 抜粋オプション
+</td></tr>
+<tr>
+<td> post_status </td>
+<td> varchar(20) </td>
+<td> </td>
+<td> IND PT2 </td>
+<td> publish </td>
+<td> </td>
+<td> 投稿ステータス
+<ul><li> <code>'publish'</code>: 公開済み</li>
+<li> <code>'pending'</code>: ペンディング</li>
+<li> <code>'draft'</code>: 草稿</li>
+<li> <code>'private'</code>: プライベート（非公開）</li>
+<li> <code>'static'</code>:（2.0.x 以前は<a href="/Pages" title="Pages" class="mw-redirect">ページ</a>）</li>
+<li> <code>'object'</code>:</li>
+<li> <code>'attachment'</code>:</li>
+<li> <code>'inherit'</code>: 継承（添付ファイル、改訂履歴・自動保存のとき）</li>
+<li> <code>'future'</code>: 予約投稿</li></ul>
+</td></tr>
+<tr>
+<td> comment_status </td>
+<td> varchar(20) </td>
+<td> </td>
+<td> </td>
+<td> open </td>
+<td> </td>
+<td> コメントステータス
+<ul><li> <code>'open'</code>: 許可</li>
+<li> <code>'closed'</code>: 不許可</li>
+<li> <code>'registered_only'</code>: 登録ユーザのみ</li></ul>
+</td></tr>
+<tr>
+<td> ping_status </td>
+<td> varchar(20) </td>
+<td> </td>
+<td> </td>
+<td> open </td>
+<td> </td>
+<td> ピン・ステータス
+<ul><li> <code>'open'</code>: トラックバック・ピンバックを受け付ける</li>
+<li> <code>'closed'</code>: 受け付けない</li></ul>
+</td></tr>
+<tr>
+<td> post_password </td>
+<td> varchar(20) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> 閲覧パスワード
+</td></tr>
+<tr>
+<td> post_name </td>
+<td> varchar(200) </td>
+<td> </td>
+<td> IND </td>
+<td> </td>
+<td> </td>
+<td>
+<ul><li> 投稿スラッグ</li>
+<li> <code>'{親ID}-revision(-#)'</code> （改訂履歴のとき）</li>
+<li> <code>'{親ID}-autosave'</code> （自動保存のとき）</li></ul>
+</td></tr>
+<tr>
+<td> to_ping </td>
+<td> text </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> pinged </td>
+<td> text </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> ピン通知済み URL
+</td></tr>
+<tr>
+<td> post_modified </td>
+<td> datetime </td>
+<td> </td>
+<td> </td>
+<td> 0000-00-00 00:00:00 </td>
+<td> </td>
+<td> 更新日時
+</td></tr>
+<tr>
+<td> post_modified_gmt </td>
+<td> datetime </td>
+<td> </td>
+<td> </td>
+<td> 0000-00-00 00:00:00 </td>
+<td> </td>
+<td> 更新日時（GMT）
+</td></tr>
+<tr>
+<td> post_content_filtered </td>
+<td> longtext </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>  </td>
+<td>
+</td></tr>
+<tr>
+<td> post_parent </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> IND </td>
+<td> 0 </td>
+<td> &#160; </td>
+<td> 親ID
+<ul><li> 親<a href="/Pages" title="Pages" class="mw-redirect">ページ</a>の投稿ID</li>
+<li> 添付ファイルが属する投稿ID</li>
+<li> 改訂履歴・自動保存のベース投稿ID</li></ul>
+</td></tr>
+<tr>
+<td> guid </td>
+<td> varchar(255) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> menu_order </td>
+<td> int(11) </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td> <a href="/Pages" title="Pages" class="mw-redirect">ページ</a>の表示順
+</td></tr>
+<tr>
+<td> post_type </td>
+<td> varchar(20) </td>
+<td> </td>
+<td> IND Pt1 </td>
+<td> post </td>
+<td> </td>
+<td> 投稿種別
+<ul><li> <code>'post'</code>: 投稿</li>
+<li> <code>'page'</code>: <a href="/Pages" title="Pages" class="mw-redirect">ページ</a></li>
+<li> <code>'attachment'</code>: 添付ファイル</li>
+<li> <code>'revision'</code>: 改訂履歴・自動保存</li></ul>
+</td></tr>
+<tr>
+<td> post_mime_type </td>
+<td> varchar(100) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> 添付ファイルのとき MIMEタイプ（<code>image/png</code> など）
+</td></tr>
+<tr>
+<td> comment_count </td>
+<td> bigint(20) </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td> コメント数
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_6">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY </td>
+<td> PRIMARY </td>
+<td> ID
+</td></tr>
+<tr>
+<td> post_name </td>
+<td> INDEX </td>
+<td> post_name
+</td></tr>
+<tr>
+<td> type_status_date </td>
+<td> INDEX </td>
+<td> post_type<br />post_status<br />post_date<br />ID
+</td></tr>
+<tr>
+<td> post_parent </td>
+<td> INDEX </td>
+<td> post_parent
+</td></tr>
+<tr>
+<td> post_author </td>
+<td> INDEX </td>
+<td> post_author
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_terms">テーブル: wp_terms<span id="Table:_wp_terms"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td> term_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI </td>
+<td> </td>
+<td> auto_increment </td>
+<td> term のユニークID
+</td></tr>
+<tr>
+<td> name </td>
+<td> varchar(200) </td>
+<td> </td>
+<td> IND </td>
+<td> </td>
+<td> </td>
+<td> term 名
+</td></tr>
+<tr>
+<td> slug </td>
+<td> varchar(200) </td>
+<td> </td>
+<td> UNI </td>
+<td> </td>
+<td> </td>
+<td> term スラッグ。term 名を URL で扱いやすい形にしたもの
+</td></tr>
+<tr>
+<td> term_group </td>
+<td> bigint(10) </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td> 類義語のグルーピング
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_7">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY </td>
+<td> PRIMARY </td>
+<td> term_id
+</td></tr>
+<tr>
+<td> slug </td>
+<td> UNIQUE </td>
+<td> slug
+</td></tr>
+<tr>
+<td> name </td>
+<td> INDEX </td>
+<td> name
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_term_relationships">テーブル: wp_term_relationships<span id="Table:_wp_term_relationships"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td> object_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI Pt1 </td>
+<td> 0 </td>
+<td> </td>
+<td> 記事ID or リンクID
+</td></tr>
+<tr>
+<td> term_taxonomy_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI Pt2 &amp; IND </td>
+<td> 0 </td>
+<td> &#160; </td>
+<td> <code>term_taxonomy</code> テーブルの <code>term_taxonomy_id</code>
+</td></tr>
+<tr>
+<td> term_order </td>
+<td> int(11) </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td>
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_8">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY </td>
+<td> PRIMARY </td>
+<td> object_id<br />term_taxonomy_id
+</td></tr>
+<tr>
+<td> term_taxonomy_id </td>
+<td> INDEX </td>
+<td> term_taxonomy_id
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_term_taxonomy">テーブル: wp_term_taxonomy<span id="Table:_wp_term_taxonomy"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td> term_taxonomy_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI </td>
+<td> </td>
+<td> auto_increment </td>
+<td> term+taxonomy ペアのユニークID
+</td></tr>
+<tr>
+<td> term_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> UNI Pt1 </td>
+<td> 0 </td>
+<td> &#160; </td>
+<td> <code>wp_terms</code> テーブルの <code>term_id</code>
+</td></tr>
+<tr>
+<td> taxonomy </td>
+<td> varchar(32) </td>
+<td> </td>
+<td> UNI Pt2 &amp; IND </td>
+<td> </td>
+<td> </td>
+<td> term が属する taxonomy
+<ul><li> <code>'category'</code>: 記事カテゴリ</li>
+<li> <code>'link_category'</code>: リンクカテゴリ</li>
+<li> <code>'post_tag'</code>: タグ</li></ul>
+</td></tr>
+<tr>
+<td> description </td>
+<td> longtext </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> term の分類上の説明。「カテゴリ説明」など
+</td></tr>
+<tr>
+<td> parent </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td> 分類上の term 間の上下関係
+</td></tr>
+<tr>
+<td> count </td>
+<td> bigint(20) </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td> term+taxonomy ペアに関連付けられたオブジェクト数。taxonomy='category' であればこのカテゴリに属する投稿記事数
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_9">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY </td>
+<td> PRIMARY </td>
+<td> term_taxonomy_id
+</td></tr>
+<tr>
+<td> term_id_taxonomy </td>
+<td> UNIQUE </td>
+<td> term_id<br />taxonomy
+</td></tr>
+<tr>
+<td> taxonomy </td>
+<td> INDEX </td>
+<td> taxonomy
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_usermeta">テーブル: wp_usermeta<span id="Table:_wp_usermeta"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td> umeta_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI </td>
+<td> &#160; </td>
+<td> auto_increment </td>
+<td> ユーザ・メタデータの ID（登録順に自動採番）
+</td></tr>
+<tr>
+<td> user_id </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> IND </td>
+<td> '0' </td>
+<td> &#160; </td>
+<td> wp_users テーブルのユーザID
+</td></tr>
+<tr>
+<td> meta_key </td>
+<td> varchar(255) </td>
+<td> YES </td>
+<td> IND </td>
+<td> NULL </td>
+<td> </td>
+<td> ユーザ・メタデータのキー名（<code>wp_capabilities</code> など）
+</td></tr>
+<tr>
+<td> meta_value </td>
+<td> longtext </td>
+<td> YES </td>
+<td>  </td>
+<td> NULL </td>
+<td> </td>
+<td> 値
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_10">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY </td>
+<td> PRIMARY </td>
+<td> umeta_id
+</td></tr>
+<tr>
+<td> user_id </td>
+<td> INDEX </td>
+<td> user_id
+</td></tr>
+<tr>
+<td> meta_key </td>
+<td> INDEX </td>
+<td> meta_key
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_users">テーブル: wp_users<span id="Table:_wp_users"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td> ID </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI </td>
+<td> &#160; </td>
+<td> auto_increment </td>
+<td> ユーザID
+</td></tr>
+<tr>
+<td> user_login </td>
+<td> varchar(60) </td>
+<td> </td>
+<td> IND </td>
+<td> </td>
+<td> </td>
+<td> ログイン名
+</td></tr>
+<tr>
+<td> user_pass </td>
+<td> varchar(64) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> パスワード（暗号化）
+</td></tr>
+<tr>
+<td> user_nicename </td>
+<td> varchar(50) </td>
+<td> </td>
+<td> IND </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> user_email </td>
+<td> varchar(100) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> Eメールアドレス
+</td></tr>
+<tr>
+<td> user_url </td>
+<td> varchar(100) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> webサイト URI
+</td></tr>
+<tr>
+<td> user_registered </td>
+<td> datetime </td>
+<td> </td>
+<td> </td>
+<td> 0000-00-00 00:00:00 </td>
+<td> </td>
+<td> 登録日時
+</td></tr>
+<tr>
+<td> user_activation_key </td>
+<td> varchar(60) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> user_status </td>
+<td> int(11) </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> display_name </td>
+<td> varchar(250) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> 表示名
+</td></tr></table>
+<p><br />
+注意: WordPress のマルチサイト機能を有効にすると、wp_users テーブルに 2つの列「<b>spam</b>」と「<b>deleted</b>」が追加されます。参照 <a href="#Table:_wp_users_2">マルチサイト版の wp_users</a>.
+</p>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_11">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY </td>
+<td> PRIMARY </td>
+<td> ID
+</td></tr>
+<tr>
+<td> user_login_key </td>
+<td> INDEX </td>
+<td> user_login
+</td></tr>
+<tr>
+<td> user_nicename </td>
+<td> INDEX </td>
+<td> user_nicename
+</td></tr></table>
+<p><br />
+</p>
+<h2><span class="mw-headline" id=".E3.83.9E.E3.83.AB.E3.83.81.E3.82.B5.E3.82.A4.E3.83.88.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB.E4.B8.80.E8.A6.A7">マルチサイトテーブル一覧<span id="Multisite_Table_Overview"></span></span></h2>
+<p>以下は WordPress の <a href="/Glossary#Multisite" title="Glossary" class="mw-redirect">マルチサイト</a> 機能の使用で作成されるテーブルの一覧です。テーブルは <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Menu#Tools" title="Super Admin Menu" class="mw-redirect">ツール</a> &gt; <a href="/Tools_Network_SubPanel" title="Tools Network SubPanel" class="mw-redirect">ネットワーク</a> で作成されます。
+</p><p>テーブルは、マルチサイトでグローバルなテーブルと見なすことができます。
+</p>
+<table class="widefat">
+
+<tr valign="top" style="background:#464646; color:#d7d7d7;">
+<th colspan="3"> <b>WordPress 3.0 マルチサイトテーブル</b>
+</th></tr>
+<tr valign="top" style="background:#464646; color:#d7d7d7;">
+<th width="6%"> テーブル名 </th>
+<th width="35%"> 説明 </th>
+<th> 関連インターフェース画面
+</th></tr>
+<tr valign="top">
+<th>  <a href="#Table:_wp_blogs">wp_blogs</a>
+</th>
+<td> 作成された各 <b>サイト</b> は、テーブル<tt>wp_blogs</tt> に格納される。 </td>
+<td>
+<ul><li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Menu#Tools" title="Super Admin Menu" class="mw-redirect">ツール</a> &gt; <a href="/Tools_Network_SubPanel" title="Tools Network SubPanel" class="mw-redirect">ネットワーク</a> </li>
+<li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Sites_SubPanel" title="Super Admin Sites SubPanel" class="mw-redirect">サイト</a>  </li></ul>
+</td></tr>
+<tr valign="top">
+<th>  <a href="#Table:_wp_blog_versions">wp_blog_versions</a>
+</th>
+<td> 各 <b>サイト</b> の現行データベースのバージョン・ステータスが、テーブル<tt>wp_blogs_versions</tt> に格納され、各サイトの更新に合わせて更新される。 </td>
+<td>
+<ul><li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Menu#Update" title="Super Admin Menu" class="mw-redirect">更新</a> &gt; <a href="/Super_Admin_Update_SubPanel" title="Super Admin Update SubPanel" class="mw-redirect">更新</a> </li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_registration_log">wp_registration_log</a>
+</th>
+<td> <tt>wp_registration_log</tt> は、各新規サイトが作成された際に、管理ユーザーを記録する。 </td>
+<td>
+<ul><li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Menu#Sites" title="Super Admin Menu" class="mw-redirect">サイト</a> &gt; <a href="/Super_Admin_Sites_SubPanel" title="Super Admin Sites SubPanel" class="mw-redirect">サイト</a>   </li></ul>
+</td></tr>
+<tr valign="top">
+<th>  <a href="#Table:_wp_signups">wp_signups</a>
+</th>
+<td> ログイン登録プロセスによりサイトに登録されたユーザーを格納する。ユーザー登録を有効化するには <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Menu#Options" title="Super Admin Menu" class="mw-redirect">設定</a> &gt; <a href="/Super_Admin_Options_SubPanel" title="Super Admin Options SubPanel" class="mw-redirect">設定</a> </td>
+<td>
+<ul><li> <a href="/Administration_Panels" title="Administration Panels" class="mw-redirect">管理画面</a> &gt; <a href="/Administration_Panels#Settings" title="Administration Panels" class="mw-redirect">設定</a> &gt; <a href="/Settings_General_SubPanel" title="Settings General SubPanel" class="mw-redirect">一般</a></li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_site">wp_site</a>
+</th>
+<td> テーブル<tt>wp_site</tt> は、メインのサイトのアドレス情報を含む。 </td>
+<td>
+<ul><li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Menu#Tools" title="Super Admin Menu" class="mw-redirect">ツール</a> &gt; <a href="/Tools_Network_SubPanel" title="Tools Network SubPanel" class="mw-redirect">ネットワーク</a> </li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_sitemeta">wp_sitemeta</a>
+</th>
+<td> 各 <b>サイト</b> の機能情報は <b>サイトデータ</b> と呼ばれ、<tt>wp_sitemeta</tt> に格納される。サイト管理を含むさまざまな <b>設定</b> 情報がテーブルに保存される。 </td>
+<td>
+<ul><li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Menu#Options" title="Super Admin Menu" class="mw-redirect">設定</a> &gt; <a href="/Super_Admin_Options_SubPanel" title="Super Admin Options SubPanel" class="mw-redirect">設定</a></li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_users_2">wp_users</a>
+</th>
+<td> すべての <b>ユーザー</b> は、テーブル <tt>wp_users</tt> で管理される。<a href="#Table:_wp_users">スタンドアローン版</a> に対して、マルチサイト版は2つのフィールドを追加する。 </td>
+<td>
+<ul><li> <a href="/Administration_Panels" title="Administration Panels" class="mw-redirect">管理画面</a> &gt; <a href="/Administration_Panels#Users" title="Administration Panels" class="mw-redirect">ユーザー</a></li>
+<li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Users_SubPanel" title="Super Admin Users SubPanel" class="mw-redirect">ユーザー</a></li>
+<li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Sites_SubPanel" title="Super Admin Sites SubPanel" class="mw-redirect">サイト</a> - 編集</li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Table:_wp_usermeta">wp_usermeta</a>
+</th>
+<td> このテーブルはマルチサイト用に再作成されないが、各サイトの <b>ユーザーのメタデータ</b> が  <tt>wp_usermeta</tt> に保存される。 </td>
+<td>
+<ul><li> <a href="/Administration_Panels" title="Administration Panels" class="mw-redirect">管理画面</a> &gt; <a href="/Administration_Panels#Users" title="Administration Panels" class="mw-redirect">ユーザー</a></li>
+<li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Users_SubPanel" title="Super Admin Users SubPanel" class="mw-redirect">ユーザー</a></li>
+<li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Sites_SubPanel" title="Super Admin Sites SubPanel" class="mw-redirect">サイト</a> - 編集</li></ul>
+</td></tr>
+<tr valign="top">
+<th> <a href="#Site_Specific_Tables">個別のサイトテーブル</a>
+</th>
+<td> メインサイトのデータは既存の、番号の付かないテーブルに格納される。追加サイトのデータは、新規に作成される番号付きのテーブルに格納される。
+</td>
+<td>
+<ul><li> <a href="/Super_Admin_Menu" title="Super Admin Menu" class="mw-redirect">ネットワーク管理</a> &gt; <a href="/Super_Admin_Sites_SubPanel" title="Super Admin Sites SubPanel" class="mw-redirect">サイト</a> - 新規追加</li></ul>
+</td></tr></table>
+<h2><span class="mw-headline" id=".E3.83.9E.E3.83.AB.E3.83.81.E3.82.B5.E3.82.A4.E3.83.88.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB.E8.A9.B3.E7.B4.B0">マルチサイトテーブル詳細<span id="Multisite_Table_Details"></span></span></h2>
+<p><a href="/Create_A_Network#Step_4:_Installing_a_Network" title="Create A Network" class="mw-redirect">ネットワークのインストール</a>で作成されるテーブルおよびフィールドについて説明します。注意&#160;: ネットワークの作成では以下のグローバルなテーブルが作成され、各サイトの作成で <a href="#Site_Specific_Tables">個別のサイトテーブル</a> が構築されます。
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_blogs">テーブル: wp_blogs<span id="Table:_wp_blogs"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td>blog_id</td>
+<td>bigint(20)</td>
+<td>&#160;</td>
+<td>PRI</td>
+<td>&#160;</td>
+<td>auto_increment</td>
+<td>サイトのID。以下の注参照。
+</td></tr>
+<tr>
+<td>site_id</td>
+<td>bigint(20)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0</td>
+<td>&#160;</td>
+<td> ネットワークのID
+</td></tr>
+<tr>
+<td>domain</td>
+<td>varchar(200)</td>
+<td>&#160;</td>
+<td>IND Pt1</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td> ドメイン。例: example.com
+</td></tr>
+<tr>
+<td>path</td>
+<td>varchar(100)</td>
+<td>&#160;</td>
+<td>IND Pt2</td>
+<td>&#160;</td>
+<td>&#160; </td>
+<td> パス。例: / 、/mysite
+</td></tr>
+<tr>
+<td>registered</td>
+<td>datetime</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0000-00-00 00:00:00</td>
+<td>&#160;</td>
+<td> 作成日時
+</td></tr>
+<tr>
+<td>last_updated</td>
+<td>datetime</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0000-00-00 00:00:00</td>
+<td>&#160;</td>
+<td> 最終更新日時
+</td></tr>
+<tr>
+<td>public</td>
+<td>tinyint(2)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>1</td>
+<td>&#160;</td>
+<td> 公開
+</td></tr>
+<tr>
+<td>archived</td>
+<td>tinyint(2)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0</td>
+<td>&#160;</td>
+<td> アーカイブ化
+</td></tr>
+<tr>
+<td>mature</td>
+<td>tinyint(2)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0</td>
+<td>&#160;</td>
+<td> 成人向け
+</td></tr>
+<tr>
+<td>spam</td>
+<td>tinyint(2)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0</td>
+<td>&#160;</td>
+<td> スパム
+</td></tr>
+<tr>
+<td>deleted</td>
+<td>tinyint(2)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0</td>
+<td>&#160;</td>
+<td> 削除
+</td></tr>
+<tr>
+<td>lang_id</td>
+<td>int(11)</td>
+<td>&#160;</td>
+<td>IND</td>
+<td>0</td>
+<td>&#160;</td>
+<td> &#160;
+</td></tr></table>
+<p><br />
+注: <b>blog_id</b>はサイトを識別し、<b>site_id</b>はネットワークを識別します。これは、WordPress 2.x 時代の 'site(サイト)' が 'blog' と呼ばれていた名残です。ネットワークにサイトを追加すると、新しい行がこのテーブル<tt>wp_blogs</tt> に追加されますが、blog_id は増分される一方で、site_idは変わらない値 (恐らく 1) のままです。
+</p>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_12">インデックス<span id="Indexes"></span></span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td>PRIMARY</td>
+<td>PRIMARY</td>
+<td>blog_id
+</td></tr>
+<tr>
+<td>domain</td>
+<td>INDEX</td>
+<td>domain<br />path
+</td></tr>
+<tr>
+<td>lang_id</td>
+<td>INDEX</td>
+<td>lang_id
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_blog_versions">テーブル: wp_blog_versions<span id="Table:_wp_blog_versions"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td>blog_id</td>
+<td>bigint(20)</td>
+<td>&#160;</td>
+<td>PRI</td>
+<td>0</td>
+<td>&#160;</td>
+<td>サイトのID
+</td></tr>
+<tr>
+<td>db_version</td>
+<td>varchar(20)</td>
+<td>&#160;</td>
+<td>IND</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>WordPress定義のデータベースのバージョン。例: 30133 (WordPress 4.1)
+</td></tr>
+<tr>
+<td>last_updated</td>
+<td>datetime</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0000-00-00 00:00:00</td>
+<td>&#160;</td>
+<td> 最終更新日時
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_13">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td>PRIMARY</td>
+<td>PRIMARY</td>
+<td>blog_id
+</td></tr>
+<tr>
+<td>db_version</td>
+<td>INDEX</td>
+<td>db_version
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_registration_log">テーブル: wp_registration_log<span id="Table:_wp_registration_log"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td>ID</td>
+<td>bigint(20)</td>
+<td>&#160;</td>
+<td>PRI</td>
+<td>&#160;</td>
+<td>auto_increment</td>
+<td>&#160;
+</td></tr>
+<tr>
+<td>email</td>
+<td>varchar(255)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>Eメールアドレス
+</td></tr>
+<tr>
+<td>IP</td>
+<td>varchar(30)</td>
+<td>&#160;</td>
+<td>IND</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;
+</td></tr>
+<tr>
+<td>blog_id</td>
+<td>bigint(20)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0</td>
+<td>&#160;</td>
+<td>サイトのID
+</td></tr>
+<tr>
+<td>date_registered</td>
+<td>datetime</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0000-00-00 00:00:00</td>
+<td>&#160;</td>
+<td>登録日時
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_14">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td>PRIMARY</td>
+<td>PRIMARY</td>
+<td>ID
+</td></tr>
+<tr>
+<td>IP</td>
+<td>INDEX</td>
+<td>IP
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_signups">テーブル: wp_signups<span id="Table:_wp_signups"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td>signup_id</td>
+<td>bigint(20)</td>
+<td>&#160;</td>
+<td>PRI</td>
+<td>&#160;</td>
+<td>auto_increment</td>
+<td>登録アカウントのID
+</td></tr>
+<tr>
+<td>domain</td>
+<td>varchar(200)</td>
+<td>&#160;</td>
+<td>IND Pt1</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;
+</td></tr>
+<tr>
+<td>path</td>
+<td>varchar(100)</td>
+<td>&#160;</td>
+<td>IND Pt2</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;
+</td></tr>
+<tr>
+<td>title</td>
+<td>longtext</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;
+</td></tr>
+<tr>
+<td>user_login</td>
+<td>varchar(60)</td>
+<td>&#160;</td>
+<td>IND Pt1</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>登録アカウント名
+</td></tr>
+<tr>
+<td>user_email</td>
+<td>varchar(100)</td>
+<td>&#160;</td>
+<td>IND &amp; IND Pt2</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>E メールアドレス
+</td></tr>
+<tr>
+<td>registered</td>
+<td>datetime</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0000-00-00 00:00:00</td>
+<td>&#160;</td>
+<td>登録日時
+</td></tr>
+<tr>
+<td>activated</td>
+<td>datetime</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0000-00-00 00:00:00</td>
+<td>&#160;</td>
+<td>アクティベートの日時
+</td></tr>
+<tr>
+<td>active</td>
+<td>tinyint(1)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>アクティブかどうか
+</td></tr>
+<tr>
+<td>activation_key</td>
+<td>varchar(50)</td>
+<td>&#160;</td>
+<td>IND</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>アクティベーションキー
+</td></tr>
+<tr>
+<td>meta</td>
+<td>longtext</td>
+<td>Yes</td>
+<td>&#160;</td>
+<td>NULL</td>
+<td>&#160;</td>
+<td>&#160;
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_15">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td>signup_id</td>
+<td>PRIMARY</td>
+<td>signup_id
+</td></tr>
+<tr>
+<td>activation_key</td>
+<td>INDEX</td>
+<td>activation_key
+</td></tr>
+<tr>
+<td>user_email</td>
+<td>INDEX</td>
+<td>user_email
+</td></tr>
+<tr>
+<td>user_login_email</td>
+<td>INDEX</td>
+<td>user_login<br />user_email
+</td></tr>
+<tr>
+<td>domain_path</td>
+<td>INDEX</td>
+<td>domain<br />path
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_site">テーブル: wp_site<span id="Table:_wp_site"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td>id</td>
+<td>bigint(20)</td>
+<td>&#160;</td>
+<td>PRI</td>
+<td>&#160;</td>
+<td>auto_increment</td>
+<td>ネットワークのID
+</td></tr>
+<tr>
+<td>domain</td>
+<td>varchar(200)</td>
+<td>&#160;</td>
+<td>IND Pt1</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>ドメイン。例: example.com
+</td></tr>
+<tr>
+<td>path</td>
+<td>varchar(100)</td>
+<td>&#160;</td>
+<td>IND Pt2</td>
+<td>&#160;</td>
+<td>&#160;パス。例: /
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_16">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td>PRIMARY</td>
+<td>PRIMARY</td>
+<td>id
+</td></tr>
+<tr>
+<td>domain</td>
+<td>INDEX</td>
+<td>domain<br />path
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_sitemeta">テーブル: wp_sitemeta<span id="Table:_wp_sitemeta"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td>meta_id</td>
+<td>bigint(20)</td>
+<td>&#160;</td>
+<td>PRI</td>
+<td>&#160;</td>
+<td>auto_increment</td>
+<td>メタ情報のID
+</td></tr>
+<tr>
+<td>site_id</td>
+<td>bigint(20)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>0</td>
+<td>&#160;</td>
+<td>ネットワークのID
+</td></tr>
+<tr>
+<td>meta_key</td>
+<td>varchar(255)</td>
+<td>Yes</td>
+<td>IND</td>
+<td>NULL</td>
+<td>&#160;</td>
+<td>キー。例: site_name、admin_email
+</td></tr>
+<tr>
+<td>meta_value</td>
+<td>longtext</td>
+<td>Yes</td>
+<td>IND</td>
+<td>NULL</td>
+<td>&#160;</td>
+<td>キーに対応する値
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_17">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td>PRIMARY</td>
+<td>PRIMARY</td>
+<td>meta_id
+</td></tr>
+<tr>
+<td>meta_key</td>
+<td>INDEX</td>
+<td>meta_key
+</td></tr>
+<tr>
+<td>site_id</td>
+<td>INDEX</td>
+<td>site_id
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.83.86.E3.83.BC.E3.83.96.E3.83.AB:_wp_users_2">テーブル: wp_users<span id="Table:_wp_users_2"></span></span></h3>
+<table class="widefat">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th> フィールド </th>
+<th> 種別 </th>
+<th> Null </th>
+<th> キー </th>
+<th> 初期値 </th>
+<th> 備考 </th>
+<th> 説明
+</th></tr>
+<tr>
+<td> ID </td>
+<td> bigint(20) unsigned </td>
+<td> </td>
+<td> PRI </td>
+<td> &#160; </td>
+<td> auto_increment </td>
+<td> ユーザID
+</td></tr>
+<tr>
+<td> user_login </td>
+<td> varchar(60) </td>
+<td> </td>
+<td> IND </td>
+<td> </td>
+<td> </td>
+<td> ログイン名
+</td></tr>
+<tr>
+<td> user_pass </td>
+<td> varchar(64) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> パスワード（暗号化）
+</td></tr>
+<tr>
+<td> user_nicename </td>
+<td> varchar(50) </td>
+<td> </td>
+<td> IND </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> user_email </td>
+<td> varchar(100) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> Eメールアドレス
+</td></tr>
+<tr>
+<td> user_url </td>
+<td> varchar(100) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> webサイト URI
+</td></tr>
+<tr>
+<td> user_registered </td>
+<td> datetime </td>
+<td> </td>
+<td> </td>
+<td> 0000-00-00 00:00:00 </td>
+<td> </td>
+<td> 登録日時
+</td></tr>
+<tr>
+<td> user_activation_key </td>
+<td> varchar(60) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> user_status </td>
+<td> int(11) </td>
+<td> </td>
+<td> </td>
+<td> 0 </td>
+<td> </td>
+<td>
+</td></tr>
+<tr>
+<td> display_name </td>
+<td> varchar(250) </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> 表示名
+</td></tr>
+<tr>
+<td>spam</td>
+<td>tinyint(2)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td> 0 </td>
+<td> &#160; </td>
+<td> マルチサイト版で追加
+</td></tr>
+<tr>
+<td>deleted</td>
+<td>tinyint(2)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td> 0 </td>
+<td> &#160; </td>
+<td> マルチサイト版で追加
+</td></tr></table>
+<h4><span class="mw-headline" id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9_18">インデックス</span></h4>
+<table class="dummy-to-narrow">
+
+<tr style="background:#464646; color:#d7d7d7;">
+<th>キー名</th>
+<th>Type</th>
+<th>フィールド
+</th></tr>
+<tr>
+<td> PRIMARY </td>
+<td> PRIMARY </td>
+<td> ID
+</td></tr>
+<tr>
+<td> user_login_key </td>
+<td> INDEX </td>
+<td> user_login
+</td></tr>
+<tr>
+<td> user_nicename </td>
+<td> INDEX </td>
+<td> user_nicename
+</td></tr></table>
+<p><br />
+</p>
+<h3><span class="mw-headline" id=".E3.82.B5.E3.82.A4.E3.83.88.E5.9B.BA.E6.9C.89.E3.81.AE.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB">サイト固有のテーブル</span></h3>
+<p>新規に追加サイトが作成されると、<a href="#Table_Overview">上のスタンドアローン版</a> と同様にサイト固有のテーブルが作成されます。新サイトの各テーブル名には、サイトの ID (<a href="#Table:_wp_blogs"><code>blog_id</code></a>) が付加されます。以下の例はサイトの ID が <i>2</i>、<a href="/Editing_wp-config.php#table_prefix" title="Editing wp-config.php" class="mw-redirect">接頭辞</a> が <i>wp_</i> の場合に作成されるテーブルです。
+</p>
+<ul><li> <a href="#Table:_wp_commentmeta"><i>wp_2</i>_commentmeta</a></li>
+<li> <a href="#Table:_wp_comments"><i>wp_2</i>_comments</a></li>
+<li> <a href="#Table:_wp_links"><i>wp_2</i>_links</a></li>
+<li> <a href="#Table:_wp_options"><i>wp_2</i>_options</a></li>
+<li> <a href="#Table:_wp_postmeta"><i>wp_2</i>_postmeta</a></li>
+<li> <a href="#Table:_wp_posts"><i>wp_2</i>_posts</a></li>
+<li> <a href="#Table:_wp_terms"><i>wp_2</i>_terms</a></li>
+<li> <a href="#Table:_wp_term_relationships"><i>wp_2</i>_term_relationships</a></li>
+<li> <a href="#Table:_wp_term_taxonomy"><i>wp_2</i>_term_taxonomy</a></li></ul>
+<p>メインサイトのデータは、番号のないテーブルに保存されます。
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id=".E3.82.BD.E3.83.BC.E3.82.B9.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB">ソースファイル<span id="Source_File"></span></span></h2>
+<p>データベーススキームは <code><a rel="nofollow" class="external text" href="http://core.trac.wordpress.org/browser/tags/5.3/src/wp-admin/includes/schema.php">wp-admin/includes/schema.php</a></code> で定義されています。
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id=".E8.B3.87.E6.96.99">資料<span id="Resources"></span></span></h2>
+<ul><li> <a href="/WordPress_%E3%81%AE%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97" title="WordPress のバックアップ">WordPress のバックアップ</a> - バックアップの実行</li>
+<li> <a rel="nofollow" class="external text" href="https://ja.wordpress.org/plugins/tags/backup">プラグインディレクトリ バックアップ</a> - backup タグの付いたプラグイン</li>
+<li> <a rel="nofollow" class="external text" href="https://ja.wordpress.org/plugins/tags/database">プラグインディレクトリ データベース</a> - database タグの付いたプラグイン</li></ul>
+<h2><span class="mw-headline" id=".E6.97.A7.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E3.81.AE.E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9.E6.A6.82.E8.A6.81">旧バージョンのデータベース概要</span></h2>
+<ul><li> <a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;oldid=4120">WordPress <b>3.0.x</b> データベース概要</a>（2010年9月4日・編集不可）</li>
+<li> <a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;oldid=3268">WordPress <b>2.9.x</b> データベース概要</a>（2010年2月17日版・編集不可）</li>
+<li> <a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;oldid=2771">WordPress <b>2.8.x</b> データベース概要</a>（2009年11月7日版・編集不可）</li>
+<li> <a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;oldid=2510">WordPress <b>2.7.x</b> データベース概要</a>（2009年5月28日版・編集不可）</li>
+<li> <a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;oldid=1870">WordPress <b>2.5.x</b> データベース概要</a>（2008年11月25日版・編集不可）</li>
+<li> <a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;oldid=1311">WordPress <b>2.3.x</b> データベース概要</a>（2008年5月14日版・編集不可）
+<ul><li> <a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;diff=cur&amp;oldid=1311">最新データベースとの違い</a>（差分表示）</li></ul></li>
+<li> <a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;oldid=1107">WordPress <b>2.1～2.2.x</b> データベース概要</a>（2007年9月28日版・編集不可）
+<ul><li> <a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;diff=cur&amp;oldid=1107">最新データベースとの違い</a>（差分表示）</li>
+<li> 2.3 との違い： 次の 3種類で確認できます。 <a href="#.E5.A4.89.E6.9B.B4.E5.B1.A5.E6.AD.B4">変更履歴</a>、<a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;oldid=1107">2.2 最終版</a>の(*)印、<a rel="nofollow" class="external text" href="https://wpdocs.osdn.jp/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81&amp;diff=1311&amp;oldid=1107">差分表示</a></li></ul></li>
+<li> <a href="http://codex.wordpress.org/Database_Description/2.0" class="extiw" title="en:Database Description/2.0">WordPress <b>2.0.x</b> データベース概要</a>(en)</li></ul>
+<h2><span class="mw-headline" id=".E5.A4.89.E6.9B.B4.E5.B1.A5.E6.AD.B4">変更履歴</span></h2>
+<ul><li> <a href="/Version_3.4" title="Version 3.4">3.4</a>&#160;:
+<ul><li> <a href="#Table:_wp_comments">comments table</a>: <code>comment_approved</code> インデックスをドロップ。</li>
+<li> <a href="#Table:_wp_options">options table</a>: <code>blog_id</code> フィールドをドロップ。</li>
+<li> <a href="#Table:_wp_posts">posts table</a>: <code>post_content_filtered</code> フィールドを text から longtext に変更。</li></ul></li></ul>
+<ul><li> <a href="/Version_3.0" title="Version 3.0">3.0</a>&#160;: 
+<ul><li> <a href="#Table:_wp_comments">comments table</a>: <code>comment_parent</code> キーが追加されました。</li>
+<li> <a href="#Table:_wp_posts">posts table</a>: <code>post_author</code> キーが追加されました。</li>
+<li> <a href="/Glossary#Multisite" title="Glossary" class="mw-redirect">マルチサイト</a>機能を有効にすると、
+<ul><li> <a href="#Multisite_Table_Overview">マルチサイト関連テーブル</a>が追加されます。</li>
+<li> <a href="#Table:_wp_users_2">users テーブル</a>に <code>spam</code> フィールドと <code>deleted</code> フィールドが追加されます。</li></ul></li></ul></li></ul>
+<ul><li> <a href="/Version_2.9" title="Version 2.9">2.9</a>&#160;: 
+<ul><li> <a href="#Table:_wp_commentmeta">commentmeta テーブル</a>： コメントに関するメタデータを格納する新規テーブル</li>
+<li> <a href="#Table:_wp_option">options テーブル</a>： <code>option_name</code> キーが UNIQUE となりました。</li></ul></li></ul>
+<ul><li> <a href="/Version_2.8" title="Version 2.8">2.8</a>&#160;:
+<ul><li> <a href="#Table:_wp_comments">comments テーブル</a>： <code>comment_post_ID</code> フィールドが <code>int(11)</code> から <code>bigint(20) unsigned</code> へ変更されました。</li>
+<li> <a href="#Table:_wp_links">links テーブル</a>： 
+<ul><li> <code>link_category</code> フィールドが削除されました。</li>
+<li> <code>link_owner</code> フィールドが <code>int(11)</code> から <code>bigint(20) unsigned</code> へ変更されました。</li></ul></li>
+<li> <a href="#Table:_wp_posts">posts テーブル</a>：
+<ul><li> <code>post_category</code> フィールドが削除されました。</li>
+<li> 草稿データにも <code>post_date</code> を格納するようになりました。</li></ul></li>
+<li> <a href="#Table:_wp_term_taxonomy">term_taxonomy テーブル</a>： KEY に <code>taxonomy</code> が追加されました。</li>
+<li> ほとんどの <code>bigint(20)</code> フィールドに <code>unsigned</code> 属性が追加されました。<br />（commentsテーブル）<code>comment_parent</code>, <code>user_id</code>, （linksテーブル）<code>link_id</code>, （optionsテーブル）<code>option_id</code>, （metaテーブル）<code>meta_id</code>, <code>post_id</code>, （postsテーブル）<code>post_author</code>, <code>post_parent</code>, （termsテーブル）<code>term_id</code>, （term_relationshipsテーブル）<code>object_id</code>, <code>term_taxonomy_id</code>, （term_taxonomyテーブル）<code>term_taxonomy_id</code>, <code>term_id</code>, <code>parent</code>, （usermetaテーブル）<code>umeta_id</code>, <code>user_id</code></li></ul></li>
+<li> <a href="/Version_2.7" title="Version 2.7">2.7</a>&#160;: 
+<ul><li> <a href="#Table:_wp_terms">terms テーブル</a>の <code>name</code> フィールドが <code>varchar(55)</code> → <code>varchar(200)</code> になりました。</li>
+<li> <a href="#Table:_wp_terms">terms テーブル</a>の KEY に <code>name</code> が追加されました。</li>
+<li> <a href="#Table:_wp_posts">posts テーブル</a>の KEY に <code>post_parent</code> が追加されました。</li></ul></li>
+<li> <a href="/Version_2.6" title="Version 2.6">2.6</a>&#160;: 投稿の改訂履歴データを持つようになりました。</li>
+<li> <a href="/Version_2.5" title="Version 2.5">2.5</a>&#160;: 
+<ul><li> 全ての <code>enum</code> タイプのフィールドが <code>varchar(20)</code> に変更されました。
+<ul><li> <a href="#Table:_wp_comments">comments テーブル</a>： <code>comment_approved</code> フィールド</li>
+<li> <a href="#Table:_wp_links">links テーブル</a>： <code>link_visible</code> フィールド</li>
+<li> <a href="#Table:_wp_options">options テーブル</a>： <code>autoload</code> フィールド</li>
+<li> <a href="#Table:_wp_posts">posts テーブル</a>： <code>post_status</code>、<code>comment_status</code>、<code>ping_status</code> フィールド</li></ul></li>
+<li> <a href="#Table:_wp_comments">comments テーブル</a>に KEY が追加されました。（<code>comment_approved_date_gmt</code>、<code>comment_date_gmt</code>）</li>
+<li> <a href="#Table:_term_relationships">term_relationships テーブル</a>に <code>term_order</code> フィールドが追加されました。</li>
+<li> 参考： <a href="/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E7%A7%BB%E8%A1%8C#2.3_.E3.81.8B.E3.82.89_2.5_.E3.81.B8.E3.81.AE.E7.A7.BB.E8.A1.8C" title="プラグインとテーマの移行">プラグインとテーマの移行 - 2.3 から 2.5 への移行 - データベースの変更</a></li></ul></li>
+<li> <a href="/Version_2.3" title="Version 2.3">2.3</a>&#160;:
+<ul><li> <code>categories</code>、<code>link2cat</code>、<code>post2cat</code> テーブル廃止、<code>terms</code>、<code>term_taxonomy</code>、<code>term_relationships</code> テーブル追加。</li>
+<li> <a href="#Table:_wp_options">options テーブル</a>より 6フィールド削除。(<code>option_can_override</code>, <code>option_type</code>, <code>option_width</code>, <code>option_height</code>, <code>option_description</code>, <code>option_admin_level</code>)</li>
+<li> <a href="#Table:_wp_posts">posts テーブル</a>の <code>post_status</code> フィールドに新規ステータス <code>'pending'</code> を追加。</li>
+<li> 参考： <a href="/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E7%A7%BB%E8%A1%8C#2.2_.E3.81.8B.E3.82.89_2.3_.E3.81.B8.E3.81.AE.E7.A7.BB.E8.A1.8C" title="プラグインとテーマの移行">プラグインとテーマの移行 - 2.2 から 2.3 への移行</a></li></ul></li>
+<li> <a href="/Version_2.1" title="Version 2.1">2.1</a>&#160;:
+<ul><li> <code>linkcategories</code> テーブル廃止。リンクカテゴリデータを <code>categories</code> テーブルにマージ、ID付け替え。</li>
+<li> <a href="#Table:_wp_posts">posts テーブル</a>に <code>post_type</code> フィールドを追加。記事／ページを判別。2.0.x では、「ページ」＝<code>post_status</code> フィールドが <code>'static'</code>。</li>
+<li> <a href="#Table:_wp_posts">posts テーブル</a>の <code>post_status</code> フィールドに、予約投稿（未来日投稿）を示す <code>'future'</code> を追加。2.0.x では <code>NOW()</code> を使用。 </li>
+<li> 参考： <a href="/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE_2.1_%E3%81%B8%E3%81%AE%E7%A7%BB%E8%A1%8C#.E3.82.B3.E3.82.A2_WordPress_DB_.E3.81.AE.E5.A4.89.E6.9B.B4.E7.82.B9" title="プラグインとテーマの 2.1 への移行">プラグインとテーマの 2.1 への移行 - コア WordPress DB の変更点</a></li></ul></li></ul>
+<p id="original">最新英語版： <a href="http://codex.wordpress.org/Database_Description" class="extiw" title="en:Database Description">WordPress Codex &#187; Database Description</a> （<a rel="nofollow" class="external text" href="http://codex.wordpress.org/Database_Description?diff=cur&amp;oldid=152445">最新版との差分</a>）</p>
+
+<!-- 
+NewPP limit report
+Cached time: 20200313042607
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.544 seconds
+Real time usage: 0.581 seconds
+Preprocessor visited node count: 297/1000000
+Preprocessor generated node count: 797/1000000
+Post‐expand include size: 1950/2097152 bytes
+Template argument size: 128/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   32.641      1 - -total
+ 54.82%   17.895      1 - テンプレート:Trac
+ 26.97%    8.803      1 - テンプレート:原文
+ 21.47%    7.008      3 - テンプレート:CurrentVersion
+-->
+
+<!-- Saved in parser cache with key wpdocs-mw_:pcache:idhash:296-0!*!0!!ja!5!* and timestamp 20200313042607 and revision id 13044
+ -->
+</div>					<div class="printfooter">
+						「<a dir="ltr" href="https://wpdocs.osdn.jp/wiki/index.php?title=データベース構造&amp;oldid=13044">https://wpdocs.osdn.jp/wiki/index.php?title=データベース構造&amp;oldid=13044</a>」から取得					</div>
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%88%9D%E5%BF%83%E8%80%85%E5%90%91%E3%81%91%E3%83%88%E3%83%94%E3%83%83%E3%82%AF" title="カテゴリ:初心者向けトピック">初心者向けトピック</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%8A%E7%B4%9A%E3%83%88%E3%83%94%E3%83%83%E3%82%AF" title="カテゴリ:上級トピック">上級トピック</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:WordPress_%E3%81%AE%E9%96%8B%E7%99%BA" title="カテゴリ:WordPress の開発">WordPress の開発</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="カテゴリ:データベース">データベース</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="カテゴリ:ネットワーク">ネットワーク</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp2.1" title="カテゴリ:wp2.1">wp2.1</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp2.3" title="カテゴリ:wp2.3">wp2.3</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp2.5" title="カテゴリ:wp2.5">wp2.5</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp2.6" title="カテゴリ:wp2.6">wp2.6</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp2.7" title="カテゴリ:wp2.7">wp2.7</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp2.8" title="カテゴリ:wp2.8">wp2.8</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp2.9" title="カテゴリ:wp2.9">wp2.9</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp3.0" title="カテゴリ:wp3.0">wp3.0</a></li><li><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp3.4" title="カテゴリ:wp3.4">wp3.4</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>案内メニュー</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">個人用ツール</h3>
+						<ul>
+							<li id="pt-login"><a href="/wiki/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0" title="ログインすることを推奨します。ただし、必須ではありません。 [o]" accesskey="o">ログイン</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">名前空間</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0"  title="本文を閲覧 [c]" accesskey="c">ページ</a></span></li>
+															<li  id="ca-talk"><span><a href="/%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0"  title="本文ページについての議論 [t]" accesskey="t" rel="discussion">議論</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>変種</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">表示</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0" >閲覧</a></span></li>
+															<li id="ca-viewsource"><span><a href="/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0&amp;action=edit"  title="このページは保護されています。&#10;ページのソースを閲覧できます。 [e]" accesskey="e">ソースを表示</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0&amp;action=history"  title="このページの過去の版 [h]" accesskey="h">履歴表示</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>その他</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">検索</label>
+						</h3>
+
+						<form action="/wiki/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="検索" title="WordPress Codex 日本語版内を検索する [f]" accesskey="f" id="searchInput" /><input type="hidden" value="特別:検索" name="title" /><input type="submit" name="fulltext" value="検索" title="この文字列が含まれるページを探す" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="表示" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" id="searchButton" class="searchButton" />							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/Main_Page"  title="メインページに移動する"></a></div>
+						<div class="portal" role="navigation" id='p-.E3.81.93.E3.81.AE.E3.82.B5.E3.82.A4.E3.83.88.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6' aria-labelledby='p-.E3.81.93.E3.81.AE.E3.82.B5.E3.82.A4.E3.83.88.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6-label'>
+			<h3 id='p-.E3.81.93.E3.81.AE.E3.82.B5.E3.82.A4.E3.83.88.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6-label'>このサイトについて</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-.E3.83.88.E3.83.83.E3.83.97.E3.83.9A.E3.83.BC.E3.82.B8"><a href="http://wpdocs.osdn.jp/" rel="nofollow">トップページ</a></li><li id="n-Codex.E3.81.A8.E3.81.AF"><a href="/Codex:WordPress_Codex_%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Codexとは</a></li><li id="n-recentchanges"><a href="/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]" accesskey="r">最近の更新</a></li><li id="n-.E7.B4.A2.E5.BC.95"><a href="http://wpdocs.sourceforge.jp/#index" rel="nofollow">索引</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-.E7.89.B9.E9.9B.86' aria-labelledby='p-.E7.89.B9.E9.9B.86-label'>
+			<h3 id='p-.E7.89.B9.E9.9B.86-label'>特集</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-WordPress-5.0"><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp5.0">WordPress 5.0</a></li><li id="n-WordPress-4.9"><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp4.9">WordPress 4.9</a></li><li id="n-WordPress-4.8"><a href="/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:wp4.8">WordPress 4.8</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-.E3.83.AA.E3.83.95.E3.82.A1.E3.83.AC.E3.83.B3.E3.82.B9' aria-labelledby='p-.E3.83.AA.E3.83.95.E3.82.A1.E3.83.AC.E3.83.B3.E3.82.B9-label'>
+			<h3 id='p-.E3.83.AA.E3.83.95.E3.82.A1.E3.83.AC.E3.83.B3.E3.82.B9-label'>リファレンス</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-.E7.94.A8.E8.AA.9E.E9.9B.86"><a href="/%E7%94%A8%E8%AA%9E%E9%9B%86">用語集</a></li><li id="n-.E3.83.90.E3.83.BC.E3.82.B8.E3.83.A7.E3.83.B3.E4.B8.80.E8.A6.A7"><a href="/WordPress_Versions">バージョン一覧</a></li><li id="n-.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E9.9A.8E.E5.B1.A4"><a href="/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E9%9A%8E%E5%B1%A4">テンプレート階層</a></li><li id="n-.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.82.BF.E3.82.B0"><a href="/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%BF%E3%82%B0">テンプレートタグ</a></li><li id="n-.E6.9D.A1.E4.BB.B6.E5.88.86.E5.B2.90.E3.82.BF.E3.82.B0"><a href="/Conditional_Tags">条件分岐タグ</a></li><li id="n-.E3.82.A4.E3.83.B3.E3.82.AF.E3.83.AB.E3.83.BC.E3.83.89.E3.82.BF.E3.82.B0"><a href="/%E3%82%A4%E3%83%B3%E3%82%AF%E3%83%AB%E3%83%BC%E3%83%89%E3%82%BF%E3%82%B0">インクルードタグ</a></li><li id="n-.E9.96.A2.E6.95.B0"><a href="/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9">関数</a></li><li id="n-.E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9"><a href="/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A6%82%E8%A6%81">データベース</a></li><li id="n-.E3.82.A2.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E3.83.95.E3.83.83.E3.82.AF"><a href="/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3_API/%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%83%E3%82%AF%E4%B8%80%E8%A6%A7">アクションフック</a></li><li id="n-.E3.83.95.E3.82.A3.E3.83.AB.E3.82.BF.E3.83.BC.E3.83.95.E3.83.83.E3.82.AF"><a href="/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3_API/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC%E3%83%95%E3%83%83%E3%82%AF%E4%B8%80%E8%A6%A7">フィルターフック</a></li><li id="n-.E7.BF.BB.E8.A8.B3.E3.81.A8.E5.9B.BD.E9.9A.9B.E5.8C.96"><a href="/WordPress_%E3%81%AE%E7%BF%BB%E8%A8%B3">翻訳と国際化</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-.E3.82.B5.E3.83.BC.E3.83.90.E3.83.BC.E5.88.A5.E6.83.85.E5.A0.B1' aria-labelledby='p-.E3.82.B5.E3.83.BC.E3.83.90.E3.83.BC.E5.88.A5.E6.83.85.E5.A0.B1-label'>
+			<h3 id='p-.E3.82.B5.E3.83.BC.E3.83.90.E3.83.BC.E5.88.A5.E6.83.85.E5.A0.B1-label'>サーバー別情報</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-.E3.83.AC.E3.83.B3.E3.82.BF.E3.83.AB.E3.82.B5.E3.83.BC.E3.83.90.E3.83.BC.E6.83.85.E5.A0.B1"><a href="/%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E6%83%85%E5%A0%B1">レンタルサーバー情報</a></li><li id="n-.E8.87.AA.E5.8B.95.E6.9B.B4.E6.96.B0.E5.AF.BE.E5.BF.9C"><a href="/Core_Update_Host_Compatibility">自動更新対応</a></li><li id="n-.E3.83.9E.E3.83.AB.E3.83.81.E3.82.B5.E3.82.A4.E3.83.88.E5.AF.BE.E5.BF.9C"><a href="/%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E6%83%85%E5%A0%B1/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B5%E3%82%A4%E3%83%88%E5%AF%BE%E5%BF%9C">マルチサイト対応</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E6.95.B4.E5.82.99' aria-labelledby='p-.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E6.95.B4.E5.82.99-label'>
+			<h3 id='p-.E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E6.95.B4.E5.82.99-label'>ドキュメント整備</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-portal"><a href="/Codex:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li id="n-.E7.B7.A8.E9.9B.86.E6.A1.88.E5.86.85"><a href="/%E3%83%98%E3%83%AB%E3%83%97:%E7%B7%A8%E9%9B%86%E6%A1%88%E5%86%85">編集案内</a></li><li id="n-Wiki.E8.A8.98.E6.B3.95.E6.97.A9.E8.A6.8B.E8.A1.A8"><a href="/%E3%83%98%E3%83%AB%E3%83%97:Wiki_%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E6%97%A9%E8%A6%8B%E8%A1%A8">Wiki記法早見表</a></li><li id="n-.E3.83.9A.E3.83.BC.E3.82.B8.E5.90.8D.E5.AF.BE.E5.BF.9C.E8.A1.A8"><a href="/Codex:%E3%83%9A%E3%83%BC%E3%82%B8%E5%90%8D%E5%AF%BE%E5%BF%9C%E8%A1%A8">ページ名対応表</a></li><li id="n-.E3.82.AB.E3.83.86.E3.82.B4.E3.83.AA.E5.90.8D.E5.AF.BE.E5.BF.9C.E8.A1.A8"><a href="/Codex:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E5%90%8D%E5%AF%BE%E5%BF%9C%E8%A1%A8">カテゴリ名対応表</a></li><li id="n-.E6.8F.BA.E3.82.89.E3.81.8E.E5.AF.BE.E7.AD.96.E3.83.BB.E8.A8.B3.E8.AA.9E"><a href="/Codex:%E6%8F%BA%E3%82%89%E3%81%8E%E5%AF%BE%E7%AD%96%E6%9C%AC%E9%83%A8">揺らぎ対策・訳語</a></li><li id="n-Wiki.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88"><a href="/Codex:Template_%E4%B8%80%E8%A6%A7">Wikiテンプレート</a></li><li id="n-.E7.B7.B4.E7.BF.92.E3.83.9A.E3.83.BC.E3.82.B8"><a href="/Codex:sandbox">練習ページ</a></li><li id="n-.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A9.E3.83.A0-.C2.BB-Docs"><a href="http://ja.forums.wordpress.org/forum/9" rel="nofollow">フォーラム » Docs</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-.E5.8D.94.E5.8A.9B.E3.83.BB.E8.B2.A2.E7.8C.AE' aria-labelledby='p-.E5.8D.94.E5.8A.9B.E3.83.BB.E8.B2.A2.E7.8C.AE-label'>
+			<h3 id='p-.E5.8D.94.E5.8A.9B.E3.83.BB.E8.B2.A2.E7.8C.AE-label'>協力・貢献</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-WordPress-.E3.81.B8.E3.81.AE.E5.8F.82.E5.8A.A0.E3.83.BB.E8.B2.A2.E7.8C.AE"><a href="https://ja.wordpress.org/get-involved/" rel="nofollow">WordPress への参加・貢献</a></li><li id="n-.E7.BF.BB.E8.A8.B3"><a href="https://translate.wordpress.org/locale/ja" rel="nofollow">翻訳</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-WordPress.E9.96.A2.E9.80.A3.E3.83.AA.E3.83.B3.E3.82.AF' aria-labelledby='p-WordPress.E9.96.A2.E9.80.A3.E3.83.AA.E3.83.B3.E3.82.AF-label'>
+			<h3 id='p-WordPress.E9.96.A2.E9.80.A3.E3.83.AA.E3.83.B3.E3.82.AF-label'>WordPress関連リンク</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-WordPress.org"><a href="http://wordpress.org/" rel="nofollow">WordPress.org</a></li><li id="n-.E6.97.A5.E6.9C.AC.E8.AA.9E.E3.83.9B.E3.83.BC.E3.83.A0.EF.BC.8F.E3.83.80.E3.82.A6.E3.83.B3.E3.83.AD.E3.83.BC.E3.83.89"><a href="http://ja.wordpress.org/" rel="nofollow">日本語ホーム／ダウンロード</a></li><li id="n-.E6.97.A5.E6.9C.AC.E8.AA.9E.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A9.E3.83.A0"><a href="http://ja.forums.wordpress.org/" rel="nofollow">日本語フォーラム</a></li><li id="n-.E3.83.97.E3.83.A9.E3.82.B0.E3.82.A4.E3.83.B3"><a href="http://ja.wordpress.org/plugins/" rel="nofollow">プラグイン</a></li><li id="n-.E3.83.86.E3.83.BC.E3.83.9E"><a href="http://ja.wordpress.org/themes/" rel="nofollow">テーマ</a></li><li id="n-.C2.BB-more"><a href="/WordPress_%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86">» more</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>ツール</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0" title="ここにリンクしている全ウィキページの一覧 [j]" accesskey="j">リンク元</a></li><li id="t-recentchangeslinked"><a href="/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0" title="このページからリンクしているページの最近の更新 [k]" accesskey="k">関連ページの更新状況</a></li><li id="t-specialpages"><a href="/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]" accesskey="q">特別ページ</a></li><li id="t-print"><a href="/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0&amp;printable=yes" rel="alternate" title="このページの印刷用ページ [p]" accesskey="p">印刷用バージョン</a></li><li id="t-permalink"><a href="/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0&amp;oldid=13044" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li id="t-info"><a href="/wiki/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E6%A7%8B%E9%80%A0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>他言語版</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-en"><a href="http://codex.wordpress.org/Database_Description" title="English: Database Description" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-ar"><a href="http://codex.wordpress.org/ar:%D9%88%D8%B5%D9%81_%D9%82%D8%A7%D8%B9%D8%AF%D8%A9_%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA" title="العربية: وصف قاعدة البيانات" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-ko"><a href="http://codex.wordpress.org/ko:%ED%95%9C%EA%B5%AD%EC%96%B4" title="한국어: 한국어" lang="ko" hreflang="ko">한국어</a></li><li class="interlanguage-link interwiki-zh-hans"><a href="http://codex.wordpress.org/zh-cn:%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8F%8F%E8%BF%B0" title="中文（简体）‎: 数据库描述" lang="zh-Hans" hreflang="zh-Hans">中文（简体）‎</a></li>					</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> このページの最終更新日時は 2017年10月15日 (日) 00:16 です。</li>
+											<li id="footer-info-copyright">特に記載がない限り、内容は<a href="/Codex:%E8%91%97%E4%BD%9C%E6%A8%A9" title="Codex:著作権">（お問い合わせください）</a>のライセンスで利用できます。</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/Codex:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Codex:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+											<li id="footer-places-about"><a href="/Codex:WordPress_Codex_%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Codex:WordPress Codex 日本語版について">WordPress Codex 日本語版について</a></li>
+											<li id="footer-places-disclaimer"><a href="/Codex:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Codex:免責事項">免責事項</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="http://sourceforge.jp/"><img src="http://sourceforge.jp/sflogo.php?group_id=3463" alt="（お問い合わせください）" width="88" height="31" /></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/wiki/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/wiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /wiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.loader.state({"user":"ready","user.groups":"ready"});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"]);
+} );</script><script>window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgBackendResponseTime":206});
+} );</script>
+	</body>
+</html>

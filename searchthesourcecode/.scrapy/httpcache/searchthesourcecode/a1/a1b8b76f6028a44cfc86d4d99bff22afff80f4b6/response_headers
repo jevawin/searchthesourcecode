@@ -1,0 +1,21 @@
+Date: Fri, 13 Mar 2020 12:37:12 GMT
+Content-Type: text/plain; charset=UTF-8
+Set-Cookie: __cfduid=da29e6ea84e38f189a48aa59621ec920c1584103032; expires=Sun, 12-Apr-20 12:37:12 GMT; path=/; domain=.support.cloudflare.com; HttpOnly; SameSite=Lax
+Set-Cookie: __cfruid=c68df0696ecf388bdc407fa31a75898e04b58417-1584103032; path=/; domain=.support.cloudflare.com; HttpOnly; Secure; SameSite=None
+P3P: CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+Vary: Accept, Accept-Encoding
+X-Xss-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Cache-Control: max-age=3600, public
+Strict-Transport-Security: max-age=259200;
+Etag: W/"72725fff14b06a96f61d260f3ee0dfbd"
+X-Zendesk-Origin-Server: classic-app-server-9c48c7dc8-4sb5k
+X-Request-Id: 55d65bd2c90da6f3-SEA
+X-Runtime: 0.108542
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Cf-Cache-Status: HIT
+Age: 971
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 5735ce10aa1434b6-LHR

@@ -1,0 +1,17 @@
+Date: Fri, 13 Mar 2020 12:36:27 GMT
+Content-Type: text/html; charset=utf-8
+Last-Modified: Sun, 23 Feb 2020 09:39:03 GMT
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Expires: Fri, 13 Mar 2020 08:34:35 GMT
+Cache-Control: max-age=10800
+X-Proxy-Cache: MISS
+X-Github-Request-Id: E530:5FE3:4E2919:62E15B:5E5368A2
+Cf-Cache-Status: HIT
+Age: 15112
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Strict-Transport-Security: max-age=2592000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+Server: cloudflare
+Cf-Ray: 5735ccf4dc16e600-LHR
+Content-Encoding: gzip

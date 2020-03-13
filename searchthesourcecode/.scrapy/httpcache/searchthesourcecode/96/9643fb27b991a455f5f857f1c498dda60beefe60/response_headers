@@ -1,0 +1,16 @@
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Strict-Transport-Security: max-age=31536000; includeSubdomains
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 13 Mar 2020 12:37:16 GMT
+Expires: Fri, 13 Mar 2020 12:37:16 GMT
+Cache-Control: private, max-age=0
+Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-JcfaLKR+KXSwQuP3fjzv' 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http: 'report-sample';report-uri https://csp.withgoogle.com/csp/scfe
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Server: support-content-ui
+X-Xss-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: NID=200=hZxh4wE89w8a2ATnhZ3bVLvrkso0J4K_qEpPE0I9yGL-G2Nop9BJkFJyzsu1GyxlIhnozV2ZTvEeQ6xWoBOm81_qogz5a7sSH83ax0U9Uym0wzKrvXMwEBv0XaYWjz6uAYdD7D7-mF8Mr9rh7NmGwKr3wYdS4IJ4THjmbFQmokU; expires=Sat, 12-Sep-2020 12:37:16 GMT; path=/; domain=.google.com; HttpOnly
+Set-Cookie: NID=200=hZxh4wE89w8a2ATnhZ3bVLvrkso0J4K_qEpPE0I9yGL-G2Nop9BJkFJyzsu1GyxlIhnozV2ZTvEeQ6xWoBOm81_qogz5a7sSH83ax0U9Uym0wzKrvXMwEBv0XaYWjz6uAYdD7D7-mF8Mr9rh7NmGwKr3wYdS4IJ4THjmbFQmokU; expires=Sat, 12-Sep-2020 12:37:16 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000

@@ -1,0 +1,16 @@
+Date: Fri, 13 Mar 2020 12:37:12 GMT
+Content-Type: text/plain; charset=utf-8
+Set-Cookie: __cfduid=de29e5b8b7aefd253282f40513c4b8aef1584103032; expires=Sun, 12-Apr-20 12:37:12 GMT; path=/; domain=.patreon.com; HttpOnly; SameSite=Lax; Secure
+Cf-Ray: 5735ce10b921e5ec-LHR
+Cache-Control: private
+Strict-Transport-Security: max-age=2592000
+Vary: Accept-Encoding
+Cf-Cache-Status: MISS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Referrer-Policy: origin,strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: sameorigin
+X-Patreon-Uuid: 81e45609-093f-402a-b7c3-2607acc7ce3f
+X-Xss-Protection: 1; mode=block
+Server: cloudflare
+Content-Encoding: gzip

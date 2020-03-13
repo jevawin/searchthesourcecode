@@ -1,0 +1,24 @@
+Server: Apple
+X-Xss-Protection: 1; mode=block
+X-Xss-Protection: 1; mode=block
+X-Frame-Options: DENY
+X-Frame-Options: DENY
+Content-Security-Policy: frame-ancestors 'none'
+Content-Security-Policy: frame-ancestors 'none';
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+Location: /uk/shop/browse/open/salespolicies
+Etag: "d41d8cd98f00b204e9800998ecf8427e"
+Last-Modified: Fri, 13 Mar 2020 12:36:27 GMT
+Content-Encoding: gzip
+Content-Language: en
+X-Request-Id: 38962826-a52c-47b8-b0e5-258009396b53
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Shred: 718ce849dbe5939f53e5940c27034afd
+Cache-Control: private, max-age=120
+Expires: Fri, 13 Mar 2020 12:38:27 GMT
+Date: Fri, 13 Mar 2020 12:36:27 GMT
+Vary: Accept-Encoding
+Set-Cookie: dssid2=2bf8d953-f3d4-4161-a97b-becf1a38b324; Path=/; Domain=apple.com; Expires=Mon, 11-Mar-2030 12:36:27 GMT; Max-Age=315360000; Secure; HttpOnly
+Set-Cookie: dssf=1; Path=/; Domain=apple.com; Expires=Mon, 11-Mar-2030 12:36:27 GMT; Max-Age=315360000; Secure; HttpOnly
+Set-Cookie: as_dc=ucp1; Domain=apple.com; Expires=Fri, 13-Mar-2020 13:06:27 GMT; Path=/; Secure
