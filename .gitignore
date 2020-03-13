@@ -5,3 +5,6 @@ feed
 # misc
 [Tt]humbs.db
 .DS_Store
+
+# logs
+logs
