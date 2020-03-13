@@ -1,2 +1,2 @@
 #!/bin/bash
-clear && true > searchthesourcecode/feed/searchthesourcecode.json && cd searchthesourcecode && scrapy crawl searchthesourcecode --output "feed/%(name)s.json" --output-format json -a query=$1 -a start=$2
+clear && echo "Running spider..." && true > searchthesourcecode/feed/searchthesourcecode.json && cd searchthesourcecode && scrapy crawl searchthesourcecode --output "feed/%(name)s.json" --output-format json -a query=$1 -a start=$2
