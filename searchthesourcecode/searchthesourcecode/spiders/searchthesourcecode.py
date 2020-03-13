@@ -18,7 +18,7 @@ class SearchTheSourceCode(scrapy.Spider):
     super(SearchTheSourceCode, self).__init__(**kw)
     url = kw.get('start')
     if not url.startswith('http://') and not url.startswith('https://'):
-      url = 'http://%s/' % url
+      url = 'https://%s/' % url
     self.url = url
     self.allowed_domains = [re.sub(r'^www\.', '', urlparse(url).hostname)]
 
