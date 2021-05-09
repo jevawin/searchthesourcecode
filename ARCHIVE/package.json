@@ -12,6 +12,6 @@
     "escape-html": "^1.0.3",
     "express": "^4.17.1",
     "request": "^2.65.0",
-    "url-parse": "^1.0.5"
+    "url-parse": "^1.5.0"
   }
 }
