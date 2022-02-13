@@ -10,7 +10,7 @@ const port = process.env.PORT || 8080;
 
 // start server
 app.listen(port);
-console.log("Server started! At http://localhost:" + port);
+console.log("Server started! At http://localhost:" + port)
 
 // listen for input
 app.get('/', (req, res) => {
@@ -23,11 +23,14 @@ app.get('/', (req, res) => {
     return res.send('Missing params. Get to fuck.')
   }
 
-  const result = scrape(SEARCH_WORD, START_URL)
-  
+  const code = scrape(SEARCH_WORD, START_URL)
+
+  console.log(code)
   // response
-  if (result === 0) {
-    res.send('success')
+  if (code === 0) {
+    const results = require('./searchthesourcecode/feed/searchthesourcecode.json')
+    res.header("Content-Type",'application/json');
+    res.send(JSON.stringify(results));
   } else {
     res.send('error')
   }
@@ -37,9 +40,8 @@ app.get('/', (req, res) => {
 
 // run scrapy via shelljs
 const scrape = (string, url) => {
-  const result = shell.exec(`./scrape.sh '${string}' '${url}'`)
-
-  return result.code
+  const response = shell.exec(`./scrape.sh '${string}' '${url}'`)
+  return response.code
 };
 
 // TODO error reporting
