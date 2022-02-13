@@ -19,15 +19,9 @@ Visit https://searchthesourcecode.com/ to try it out!
 ```
 git clone git@github.com:jevawin/searchthesourcecode.git
 cd searchthesourcecode
-./clear_run.sh 'CODE TO SEARCH FOR' 'WEBSITE_URL'
+npm install
+pip install scrapy
+node index.js
 ```
 
-For example, if you wanted to look for jQuery's ready function on Google you'd run:
-
-```
-./clear_run.sh '$(function() {' 'https://www.google.com/'
-```
-
-The results are output to `feed/searchthesourcecode.json`.
-
-By default, crawls are limited to 50 URLs. You can change this by editing `CLOSESPIDER_PAGECOUNT` in `settings.py`.
+Then access on http://localhost:8080/?domain=www.domaintosearch.com&search=encodedhtml
