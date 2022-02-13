@@ -20,15 +20,15 @@ app.get('/', (req, res) => {
   const SEARCH_WORD = search ? decodeURIComponent(req.query.search) : undefined;
 
   if (!START_URL || !SEARCH_WORD) {
-    return res.send('Missing params. Get to fuck.')
+    return res.send('Missing params.')
   }
 
   const code = scrape(SEARCH_WORD, START_URL)
 
-  console.log(code)
   // response
   if (code === 0) {
     const results = require('./searchthesourcecode/feed/searchthesourcecode.json')
+    
     res.header("Content-Type",'application/json');
     res.send(JSON.stringify(results));
   } else {
