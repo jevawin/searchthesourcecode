@@ -19,23 +19,22 @@ app.get("/", function (req, res) {
   SEARCH_WORD = decodeURIComponent(req.query.search);
 
   // run scrapy
-  scrape(res, SEARCH_WORD, START_URL)
+  const result = scrape(res, SEARCH_WORD, START_URL)
+
+  // response
+  if (result === 0) {
+    res.send('success')
+  } else {
+    res.send('error')
+  }
 });
 
 /* FUNCTIONS */
 
 // run scrapy via shelljs
 const scrape = (res, string, url) => {
-  shell.exec(`./scrape.sh '${string}' '${url}'`, (code, out, err) => {
-    if (err === 0) {
-      res.send(code, out, err)
-      shell.exit(0)
-    } else {
-      error(err)
-      shell.exit(1)
-    }
-
-  });
+  const result = shell.exec(`./scrape.sh '${string}' '${url}'`)
+  return result.code
 };
 
 // TODO error reporting
