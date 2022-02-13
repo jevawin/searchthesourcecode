@@ -1,5 +1,4 @@
 #!/bin/bash
-clear
 echo "Running spider..."
 mkdir -p searchthesourcecode/feed
 mkdir -p searchthesourcecode/logs

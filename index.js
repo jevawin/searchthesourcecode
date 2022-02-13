@@ -13,14 +13,18 @@ app.listen(port);
 console.log("Server started! At http://localhost:" + port);
 
 // listen for input
-app.get("/", function (req, res) {
+app.get('/', (req, res) => {
+  const { domain, search } = req.query
   // search parameters
-  START_URL = decodeURIComponent(req.query.domain);
-  SEARCH_WORD = decodeURIComponent(req.query.search);
+  const START_URL = domain ? decodeURIComponent(req.query.domain) : undefined;
+  const SEARCH_WORD = search ? decodeURIComponent(req.query.search) : undefined;
 
-  // run scrapy
-  const result = scrape(res, SEARCH_WORD, START_URL)
+  if (!START_URL || !SEARCH_WORD) {
+    return res.send('Missing params. Get to fuck.')
+  }
 
+  const result = scrape(SEARCH_WORD, START_URL)
+  
   // response
   if (result === 0) {
     res.send('success')
@@ -32,8 +36,9 @@ app.get("/", function (req, res) {
 /* FUNCTIONS */
 
 // run scrapy via shelljs
-const scrape = (res, string, url) => {
+const scrape = (string, url) => {
   const result = shell.exec(`./scrape.sh '${string}' '${url}'`)
+
   return result.code
 };
 
