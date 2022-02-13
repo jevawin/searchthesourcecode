@@ -8,4 +8,5 @@ feed
 .vscode
 .scrapy
 .venv
+.dccache
 searchthesourcecode
