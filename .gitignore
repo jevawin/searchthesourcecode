@@ -7,6 +7,5 @@ feed
 .DS_Store
 .vscode
 .scrapy
-
-# logs
-logs
+.venv
+searchthesourcecode

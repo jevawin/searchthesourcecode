@@ -1,0 +1,23 @@
+{
+  "name": "searchthesourcecode",
+  "version": "0.0.2",
+  "description": "Spiders a website and searches each page's source code for a particular string. Returns all the locations and URLs where the string was found. Good for searching for code snippets on a website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/absoluteweapons/searchthesourcecode.git"
+  },
+  "author": "Jamie Evawin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/absoluteweapons/searchthesourcecode/issues"
+  },
+  "homepage": "https://github.com/absoluteweapons/searchthesourcecode#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "shelljs": "^0.8.5"
+  }
+}

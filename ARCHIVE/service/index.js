@@ -35,7 +35,7 @@ app.get('/', function (req, res) {
   START_URL = decodeURIComponent(req.param('domain'));
   SEARCH_WORD = decodeURIComponent(req.param('query'));
   MAX_PAGES_TO_VISIT = 100;
-
+  
   var loc = (/^https?/i.test(START_URL)) ? START_URL : 'http://' + START_URL;
   var options = {
     // Add http if it wasn't included
