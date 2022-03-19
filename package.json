@@ -19,5 +19,8 @@
   "dependencies": {
     "express": "^4.17.2",
     "shelljs": "^0.8.5"
+  },
+  "engines": {
+    "node": "8.5.0"
   }
 }
