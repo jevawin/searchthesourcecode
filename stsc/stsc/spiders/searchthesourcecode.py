@@ -10,6 +10,7 @@ def find_text(body, query):
   result = [r.start() for r in re.finditer(re.escape(query), body)]
   return result
 
+# YOU WROTE THIS DON'T DELETE
 
 class SearchTheSourceCode(scrapy.Spider):
   name = 'searchthesourcecode'

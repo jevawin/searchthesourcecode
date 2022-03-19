@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Running spider..."
-mkdir -p searchthesourcecode/feed
-mkdir -p searchthesourcecode/logs
-true > searchthesourcecode/feed/searchthesourcecode.json
-cd searchthesourcecode
-scrapy crawl searchthesourcecode --output "feed/%(name)s.json" -a query=$1 -a start=$2
+cd stsc
+mkdir -p feed
+mkdir -p logs
+scrapy crawl searchthesourcecode --output "./feed/$1" -a query=$2 -a start=$3
+echo "Done. Results logged to: ./stsc/feed/$1"

@@ -1,6 +1,7 @@
 # dependencies
 node_modules
 feed
+logs
 
 # misc
 [Tt]humbs.db

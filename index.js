@@ -23,11 +23,20 @@ app.get('/', (req, res) => {
     return res.send('Missing params.')
   }
 
-  const code = scrape(SEARCH_WORD, START_URL)
+  // set filename to hostname + timestamp
+  const protocol = (START_URL.indexOf('http') > -1) ? '' : 'http://'
+  const url = new URL(protocol + START_URL)
+  const filename 
+    = url.hostname 
+    + '_'
+    + Date.now()
+    + '.json'
+
+  const code = scrape(filename, SEARCH_WORD, url)
 
   // response
   if (code === 0) {
-    const results = require('./searchthesourcecode/feed/searchthesourcecode.json')
+    const results = require(`./stsc/feed/${filename}`)
     
     res.header("Content-Type",'application/json');
     res.send(JSON.stringify(results));
@@ -39,8 +48,8 @@ app.get('/', (req, res) => {
 /* FUNCTIONS */
 
 // run scrapy via shelljs
-const scrape = (string, url) => {
-  const response = shell.exec(`./scrape.sh '${string}' '${url}'`)
+const scrape = (filename, string, url) => {
+  const response = shell.exec(`./scrape.sh '${filename}' '${string}' '${url}'`)
   return response.code
 };
 
