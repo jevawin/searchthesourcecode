@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 
 // run scrapy via shelljs
 const scrape = (filename, string, url) => {
-  const response = shell.exec(`./scrape.sh '${filename}' '${string}' '${url}'`)
+  const response = shell.exec(`${__dirname}/scrape.sh '${filename}' '${string}' '${url}'`)
   return response.code
 };
 
