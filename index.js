@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 
   // response
   if (code === 0) {
-    const results = require(`./stsc/feed/${filename}`)
+    const results = require(`${__dirname}/stsc/feed/${filename}`)
     
     res.header("Content-Type",'application/json');
     res.send(JSON.stringify(results));
