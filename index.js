@@ -1,19 +1,24 @@
 /* DEPENDENCIES */
 const express = require("express");
 const shell = require("shelljs");
+var cors = require("cors");
 
 /* SERVER */
 
 // configuration
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8888;
+const corsOptions = {
+  origin: "*",
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 
 // start server
 app.listen(port);
 console.log("Server started! At http://localhost:" + port)
 
 // listen for input
-app.get('/', (req, res) => {
+app.get('/', cors(corsOptions), (req, res) => {
   const { domain, search } = req.query
   // search parameters
   const START_URL = domain ? decodeURIComponent(req.query.domain) : undefined;
@@ -39,7 +44,7 @@ app.get('/', (req, res) => {
     const results = require(`${__dirname}/stsc/feed/${filename}`)
     
     res.header("Content-Type",'application/json');
-    res.send(JSON.stringify(results));
+    res.json(results);
   } else {
     res.send('error')
   }

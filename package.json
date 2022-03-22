@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/absoluteweapons/searchthesourcecode#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "shelljs": "^0.8.5"
   },
   "engines": {
-    "node": "14.17.6"
+    "node": "17.7.2"
   }
 }
