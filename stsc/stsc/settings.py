@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = 'stsc.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'searchthesourcecode (+http://searchthesourcecode.com)'
+USER_AGENT = 'searchthesourcecode (+https://searchthesourcecode.com/)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True

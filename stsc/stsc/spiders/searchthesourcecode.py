@@ -28,12 +28,14 @@ class SearchTheSourceCode(scrapy.Spider):
 
   def parse(self, response):
     url = response.url
+    url_no_host = re.match("^(https?:\/\/[^:\/\s]+)(\/.*)$", response.url)
     body = response.text
     matches = find_text(body, self.query)
     count = len(matches)
-
+  
     yield {
         'url': url,
+        'hostless': url_no_host.group(2),
         'matches': json.dumps(matches),
         'count': count
     }
