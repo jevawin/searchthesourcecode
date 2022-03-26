@@ -32,12 +32,16 @@ class SearchTheSourceCode(scrapy.Spider):
     body = response.text
     matches = find_text(body, self.query)
     count = len(matches)
+    snippet_start = max(0, matches[1] - 50)
+    snippet_end = snippet_start + 100
+    snippet = body[snippet_start:snippet_end]
   
     yield {
         'url': url,
         'hostless': url_no_host.group(2),
         'matches': json.dumps(matches),
-        'count': count
+        'count': count,
+        'snippet': snippet
     }
 
     trending_links = LxmlLinkExtractor(
