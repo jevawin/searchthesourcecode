@@ -64,7 +64,7 @@ const scrape = (filename, string, url) => {
   });
 };
 
-// TODO error reporting
+// error reporting
 const error = (message) => {
-  console.log(message);
+  console.error(message);
 };
