@@ -1,6 +1,6 @@
 /* DEPENDENCIES */
 const express = require("express");
-const { spawn } = require("child_process");
+const { spawn, exec } = require("child_process");
 var cors = require("cors");
 
 /* SERVER */
@@ -22,7 +22,8 @@ app.get("/", cors(corsOptions), async (req, res) => {
   const { domain, search } = req.query;
   // search parameters
   const START_URL = domain ? decodeURIComponent(req.query.domain) : undefined;
-  const SEARCH_WORD = search ? decodeURIComponent(req.query.search) : undefined;
+  // const SEARCH_WORD = search ? decodeURIComponent(req.query.search) : undefined;
+  const SEARCH_WORD = search ? req.query.search : undefined;
 
   if (!START_URL || !SEARCH_WORD) {
     return res.send("Missing params.");
@@ -33,6 +34,10 @@ app.get("/", cors(corsOptions), async (req, res) => {
   const url = new URL(protocol + START_URL);
   const filename = url.hostname + "_" + Date.now() + ".json";
 
+  // create directories
+  prep();
+
+  // run scrapy
   const response = await scrape(filename, SEARCH_WORD, url.href);
 
   // response
@@ -43,21 +48,38 @@ app.get("/", cors(corsOptions), async (req, res) => {
     res.json(results);
   } else {
     res.send("error");
-    error(response);
   }
 });
 
 /* FUNCTIONS */
+const prep = () => {
+  exec(`mkdir -p ${__dirname}/stsc/feed`);
+  exec(`mkdir -p ${__dirname}/stsc/logs`);
+};
 
 // run scrapy via child_process
 const scrape = (filename, string, url) => {
-  const command = `${__dirname}/scrape.sh`;
-  const args = [filename, string, url];
-  const shell = spawn(command, args);
+  const path = `${__dirname}/stsc`; // working directory to run scrapy
+  const file = `${path}/feed/${filename}`; // path and filename for results
+  const query = `query=${string}`; // search query provided by searchthesourcecode.com
+  const start = `start=${url}`; // start url provided by searchthesourcecode.com
+  const command = "scrapy"; // scrapy command
+  const args = ["crawl", "searchthesourcecode", "--output", file, "-a", query, "-a", start];
+  const shell = spawn(command, args, { cwd: path });
+
   return new Promise((resolve) => {
-    shell.stderr.on("data", (data) => {
-      resolve(data);
+    // stdout, see what's happening
+    shell.stdout.on("data", (data) => {
+      console.log(`stdout: ${data}`);
     });
+
+    // errors
+    shell.stderr.on("data", (data) => {
+      error(data); // log error
+      resolve(1); // resolve with error
+    });
+
+    // success
     shell.on("close", (code) => {
       resolve(code);
     });
