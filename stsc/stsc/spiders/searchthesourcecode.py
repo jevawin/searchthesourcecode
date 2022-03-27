@@ -1,13 +1,13 @@
 import scrapy
 from scrapy.linkextractors.lxmlhtml import LxmlLinkExtractor
-from six.moves.urllib.parse import urlparse
+from urllib.parse import urlparse
+from urllib.parse import unquote
 import re
 import json
-import sys
 
 
 def find_text(body, query):
-  result = [r.start() for r in re.finditer(re.escape(query), body)]
+  result = [r.start() for r in re.finditer(re.escape(unquote(query)), body)]
   return result
 
 # YOU WROTE THIS DON'T DELETE
@@ -32,9 +32,12 @@ class SearchTheSourceCode(scrapy.Spider):
     body = response.text
     matches = find_text(body, self.query)
     count = len(matches)
-    snippet_start = max(0, matches[1] - 50)
-    snippet_end = snippet_start + 100
-    snippet = body[snippet_start:snippet_end]
+    if count > 0:
+      snippet_start = max(0, matches[0] - 50)
+      snippet_end = snippet_start + 100
+      snippet = body[snippet_start:snippet_end]
+    else:
+      snippet = ""
   
     yield {
         'url': url,
