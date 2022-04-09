@@ -88,7 +88,7 @@ DEFAULT_REQUEST_HEADERS = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # Stop after X pages
-CLOSESPIDER_PAGECOUNT = 50
+CLOSESPIDER_PAGECOUNT = 100
 
 # Follow redirects
 REDIRECT_ENABLED = True

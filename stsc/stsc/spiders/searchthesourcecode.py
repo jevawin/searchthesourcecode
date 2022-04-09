@@ -4,7 +4,6 @@ from urllib.parse import urlparse
 from urllib.parse import unquote
 import re
 import json
-import sys
 
 def find_text(body, query):
   sQuery = re.escape(' '.join(unquote(query).split()))
