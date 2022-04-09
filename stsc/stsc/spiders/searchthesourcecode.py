@@ -7,8 +7,8 @@ import json
 import sys
 
 def find_text(body, query):
-  sQuery = re.escape(''.join(unquote(query).split()))
-  sBody = ''.join(body.split())
+  sQuery = re.escape(' '.join(unquote(query).split()))
+  sBody = ' '.join(body.split())
   result = [r.start() for r in re.finditer(sQuery, sBody, re.IGNORECASE)]
   return result
 
@@ -31,7 +31,7 @@ class SearchTheSourceCode(scrapy.Spider):
   def parse(self, response):
     url = response.url
     url_no_host = re.match("^(https?:\/\/[^:\/\s]+)(\/.*)$", response.url, re.IGNORECASE)
-    body = response.text
+    body = ' '.join(response.text.split())
     matches = find_text(body, self.query)
     count = len(matches)
     if count > 0:
