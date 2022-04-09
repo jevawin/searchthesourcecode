@@ -8,6 +8,7 @@ var cors = require("cors");
 // configuration
 const app = express();
 const port = process.env.PORT || 8888;
+// TODO set up dev environment then lock cors to searchthesourcecode.com
 const corsOptions = {
   origin: "*",
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
