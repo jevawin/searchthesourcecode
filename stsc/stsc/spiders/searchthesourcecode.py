@@ -4,10 +4,12 @@ from urllib.parse import urlparse
 from urllib.parse import unquote
 import re
 import json
-
+import sys
 
 def find_text(body, query):
-  result = [r.start() for r in re.finditer(re.escape(unquote(query)), body, re.IGNORECASE)]
+  sQuery = re.escape(''.join(unquote(query).split()))
+  sBody = ''.join(body.split())
+  result = [r.start() for r in re.finditer(sQuery, sBody, re.IGNORECASE)]
   return result
 
 # YOU WROTE THIS DON'T DELETE
