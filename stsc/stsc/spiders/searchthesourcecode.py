@@ -7,7 +7,7 @@ import json
 
 
 def find_text(body, query):
-  result = [r.start() for r in re.finditer(re.escape(unquote(query)), body)]
+  result = [r.start() for r in re.finditer(re.escape(unquote(query)), body, re.IGNORECASE)]
   return result
 
 # YOU WROTE THIS DON'T DELETE
@@ -28,7 +28,7 @@ class SearchTheSourceCode(scrapy.Spider):
 
   def parse(self, response):
     url = response.url
-    url_no_host = re.match("^(https?:\/\/[^:\/\s]+)(\/.*)$", response.url)
+    url_no_host = re.match("^(https?:\/\/[^:\/\s]+)(\/.*)$", response.url, re.IGNORECASE)
     body = response.text
     matches = find_text(body, self.query)
     count = len(matches)
