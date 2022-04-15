@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 8888;
 const corsOptions = { origin: "*" };
 if (process.env.HEROKU === "production") {
-  corsOptions.origin = "searchthesourcecode.com";
+  corsOptions.origin = "https://searchthesourcecode.com";
 }
 
 // start server
