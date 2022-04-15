@@ -1,3 +1,4 @@
+import sys
 import scrapy
 from scrapy.linkextractors.lxmlhtml import LxmlLinkExtractor
 from urllib.parse import urlparse
@@ -25,7 +26,10 @@ class SearchTheSourceCode(scrapy.Spider):
     self.allowed_domains = [re.sub(r'^www\.', '', urlparse(url).hostname)]
 
   def start_requests(self):
-    yield scrapy.Request(self.url, callback=self.parse)
+    yield scrapy.Request(self.url, callback=self.parse, errback=self.error)
+
+  def error(self, failure):
+    print(failure.value.response.status, file=sys.stderr)
 
   def parse(self, response):
     url = response.url

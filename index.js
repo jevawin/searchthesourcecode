@@ -43,7 +43,7 @@ app.get("/", cors(corsOptions), async (req, res) => {
     res.header("Content-Type", "application/json");
     res.json(results);
   } else {
-    res.send("error");
+    res.send(`ERROR: ${response}`);
   }
 });
 
@@ -62,17 +62,12 @@ const scrape = (filename, string, url) => {
   const command = "scrapy"; // scrapy command
   const args = ["crawl", "searchthesourcecode", "--output", file, "-a", query, "-a", start];
   const shell = spawn(command, args, { cwd: path });
+  // console.log(`${command} ${args.join(' ')}`)
 
   return new Promise((resolve) => {
-    // stdout, see what's happening
-    shell.stdout.on("data", (data) => {
-      console.log(`stdout: ${data}`);
-    });
-
     // errors
     shell.stderr.on("data", (data) => {
-      error(data); // log error
-      resolve(1); // resolve with error
+      resolve(data); // resolve with error code
     });
 
     // success
@@ -80,9 +75,4 @@ const scrape = (filename, string, url) => {
       resolve(code);
     });
   });
-};
-
-// error reporting
-const error = (message) => {
-  console.error(message);
 };
