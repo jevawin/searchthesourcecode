@@ -8,11 +8,10 @@ var cors = require("cors");
 // configuration
 const app = express();
 const port = process.env.PORT || 8888;
-// TODO set up dev environment then lock cors to searchthesourcecode.com
-const corsOptions = {
-  origin: "*",
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
+const corsOptions = { origin: "*" };
+if (process.env.HEROKU === "production") {
+  corsOptions.origin = "searchthesourcecode.com";
+}
 
 // start server
 app.listen(port);
@@ -21,25 +20,21 @@ console.log("Server started! At http://localhost:" + port);
 // listen for input
 app.get("/", cors(corsOptions), async (req, res) => {
   const { domain, search } = req.query;
-  // search parameters
-  const START_URL = domain ? decodeURIComponent(req.query.domain) : undefined;
-  // const SEARCH_WORD = search ? decodeURIComponent(req.query.search) : undefined;
-  const SEARCH_WORD = search ? req.query.search : undefined;
 
-  if (!START_URL || !SEARCH_WORD) {
+  if (!domain || !search) {
     return res.send("Missing params.");
   }
 
   // set filename to hostname + timestamp
-  const protocol = START_URL.indexOf("http") > -1 ? "" : "http://";
-  const url = new URL(protocol + START_URL);
+  const protocol = domain.indexOf("http") > -1 ? "" : "http://";
+  const url = new URL(protocol + domain);
   const filename = url.hostname + "_" + Date.now() + ".json";
 
   // create directories
   prep();
 
   // run scrapy
-  const response = await scrape(filename, SEARCH_WORD, url.href);
+  const response = await scrape(filename, search, url.href);
 
   // response
   if (response == 0) {
