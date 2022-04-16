@@ -19,7 +19,7 @@ console.log("Server started! At http://localhost:" + port);
 
 // listen for input
 app.get("/", cors(corsOptions), async (req, res) => {
-  const { domain, search, ua } = req.query;
+  const { domain, search } = req.query;
 
   if (!domain || !search) {
     return res.send("Missing params.");
@@ -29,8 +29,6 @@ app.get("/", cors(corsOptions), async (req, res) => {
   const protocol = domain.indexOf("http") > -1 ? "" : "http://";
   const url = new URL(protocol + domain);
   const filename = url.hostname + "_" + Date.now() + ".json";
-  // const agent = ua === "true";
-  const agent = true;
 
   // create directories
   prep();
@@ -63,8 +61,7 @@ const scrape = (filename, string, url) => {
   const query = `query=${string}`; // search query provided by searchthesourcecode.com
   const start = `start=${url}`; // start url provided by searchthesourcecode.com
   const command = "scrapy"; // scrapy command
-  //const ua = `USER_AGENT="Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/603.1.23 (KHTML, like Gecko) Version/10.0 Mobile/14E5239e Safari/602.1"`; // iPhone-like user agent to access sites that reject bots
-  const args = ["crawl", "searchthesourcecode", "--output", file, "-a", query, "-a", start/*, "-s", ua*/];
+  const args = ["crawl", "searchthesourcecode", "--output", file, "-a", query, "-a", start];
   const shell = spawn(command, args, { cwd: path });
   // console.log(`${command} ${args.join(' ')}`)
 
