@@ -45,7 +45,7 @@ app.get("/", cors(corsOptions), async (req, res) => {
     res.json(results);
   } else {
     res.status(response.error);
-    res.send(response.body);
+    res.json(response);
   }
 });
 
