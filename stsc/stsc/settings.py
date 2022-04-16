@@ -14,10 +14,11 @@ NEWSPIDER_MODULE = 'stsc.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'searchthesourcecode (+https://searchthesourcecode.com/)'
+#USER_AGENT = 'searchthesourcecode (+https://searchthesourcecode.com/)'
+USER_AGENT = 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/603.1.23 (KHTML, like Gecko) Version/10.0 Mobile/14E5239e Safari/602.1'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+#ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -39,7 +40,7 @@ ROBOTSTXT_OBEY = True
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-#   'Accept-Language': 'en',
+   'Accept-Language': 'en',
 }
 
 # Enable or disable spider middlewares
@@ -95,3 +96,4 @@ REDIRECT_ENABLED = True
 
 # Log to file
 LOG_FILE = 'logs/scrapy.log'
+#LOG_LEVEL = 'ERROR'
