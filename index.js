@@ -36,14 +36,16 @@ app.get("/", cors(corsOptions), async (req, res) => {
   // run scrapy
   const response = await scrape(filename, search, url.href);
 
+  // set response type to json
+  res.header("Content-Type", "application/json");
+
   // response
   if (response == 0) {
     const results = require(`${__dirname}/stsc/feed/${filename}`);
-
-    res.header("Content-Type", "application/json");
     res.json(results);
   } else {
-    res.send(`ERROR: ${response}`);
+    res.status(response.error);
+    res.json(response);
   }
 });
 
@@ -67,7 +69,7 @@ const scrape = (filename, string, url) => {
   return new Promise((resolve) => {
     // errors
     shell.stderr.on("data", (data) => {
-      resolve(data); // resolve with error code
+      resolve(JSON.parse(data)); // resolve with error code
     });
 
     // success
