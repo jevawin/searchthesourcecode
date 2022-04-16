@@ -44,7 +44,8 @@ app.get("/", cors(corsOptions), async (req, res) => {
     const results = require(`${__dirname}/stsc/feed/${filename}`);
     res.json(results);
   } else {
-    res.json(response);
+    res.status(response.error);
+    res.send(response.body);
   }
 });
 
