@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/absoluteweapons/searchthesourcecode.git"
+    "url": "git+https://github.com/jamieevawin/searchthesourcecode.git"
   },
   "author": "Jamie Evawin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/absoluteweapons/searchthesourcecode/issues"
+    "url": "https://github.com/jamieevawin/searchthesourcecode/issues"
   },
-  "homepage": "https://github.com/absoluteweapons/searchthesourcecode#readme",
+  "homepage": "https://github.com/jamieevawin/searchthesourcecode#readme",
   "dependencies": {
     "child_process": "^1.0.2",
     "cors": "^2.8.5",
