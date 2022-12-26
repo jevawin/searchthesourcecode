@@ -1,0 +1,4 @@
+name = "searchthesourcecode"
+main = "src/index.ts"
+compatibility_date = "2022-12-15"
+kv_namespaces = [{ binding = "KV", id = "cfea4b266ddf4abb9e7aaff3cd96612c", preview_id = "56baa5033f2f45b39d58ccfca6d10152" }]
